@@ -40,7 +40,11 @@ This portfolio shows some of my efforts in that direction:
 </div>
 
 <h2 class="section-title">Feature Wall</h2>
-<div class="wall-scroll reveal">
+<div class="wall-controls">
+  <button type="button" data-wall-prev>&larr; Prev</button>
+  <button type="button" data-wall-next>Next &rarr;</button>
+</div>
+<div class="wall-scroll reveal" data-wall-scroll>
   <div class="wall-card">
     <div class="wall-card__label">Feature A</div>
     <div class="wall-card__title">Ovarian Cancer Modeling</div>
@@ -173,14 +177,17 @@ This portfolio shows some of my efforts in that direction:
   <img src="../assets/img/headshot.jpeg" alt="Headshot" />
   <div>
     <strong>Kadin El Bakkouri</strong>
-    <p>Email: kelbakkouri@ufl.edu<br/>
-    Email (alt): elbakkouri.kadin@gmail.com<br/>
-    Phone: 405-465-4320</p>
+    <p>Email: <a href="mailto:kelbakkouri@ufl.edu">kelbakkouri@ufl.edu</a><br/>
+    Email (alt): <a href="mailto:elbakkouri.kadin@gmail.com">elbakkouri.kadin@gmail.com</a><br/>
+    Phone: <a href="tel:+14054654320">405-465-4320</a></p>
     <p>
-      LinkedIn: https://www.linkedin.com/in/kadin-el-bakkouri-09531b289/<br/>
-      GitHub: https://github.com/kadinelbak<br/>
-      MakerWorld: https://makerworld.com/en/@KadinKreates/upload
+      LinkedIn: <a href="https://www.linkedin.com/in/kadin-el-bakkouri-09531b289/">kadin-el-bakkouri</a><br/>
+      GitHub: <a href="https://github.com/kadinelbak">kadinelbak</a><br/>
+      MakerWorld: <a href="https://makerworld.com/en/@KadinKreates/upload">KadinKreates</a>
     </p>
-    <p>CV: ../assets/pdf/CV.pdf<br/>Resume: ../assets/pdf/Resume.pdf</p>
+    <p>
+      <a href="../assets/pdf/CV.pdf" download>Download CV (PDF)</a><br/>
+      <a href="../assets/pdf/Resume.pdf" download>Download Resume (PDF)</a>
+    </p>
   </div>
 </div>

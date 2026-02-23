@@ -55,6 +55,21 @@
   </script>
   <script>
     (function () {
+      const scroller = document.querySelector('[data-wall-scroll]');
+      if (!scroller) return;
+      const prev = document.querySelector('[data-wall-prev]');
+      const next = document.querySelector('[data-wall-next]');
+      const scrollByCard = (dir) => {
+        const card = scroller.querySelector('.wall-card');
+        const offset = card ? card.offsetWidth + 18 : 280;
+        scroller.scrollBy({ left: dir * offset, behavior: 'smooth' });
+      };
+      if (prev) prev.addEventListener('click', () => scrollByCard(-1));
+      if (next) next.addEventListener('click', () => scrollByCard(1));
+    })();
+  </script>
+  <script>
+    (function () {
       const reveals = document.querySelectorAll('.reveal');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
