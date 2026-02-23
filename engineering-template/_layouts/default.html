@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} | Engineering Portfolio</title>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+</head>
+<body class="theme-engineering">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="{{ '/index.md' | relative_url }}">Portfolio</a>
+      <nav class="nav-links">
+        <a href="{{ '/index.md#gallery' | relative_url }}">Gallery</a>
+        <a href="{{ '/index.md#exhibits' | relative_url }}">Exhibits</a>
+        <a href="{{ '/index.md#research' | relative_url }}">Research</a>
+        <a href="{{ '/index.md#technical' | relative_url }}">Technical</a>
+        <a href="{{ '/index.md#leadership' | relative_url }}">Leadership</a>
+        <a href="{{ '/index.md#contact' | relative_url }}">Contact</a>
+      </nav>
+      <div class="view-toggle" data-view-toggle>
+        <button type="button" data-view="wall">Gallery Wall</button>
+        <button type="button" data-view="immersive">Immersive</button>
+        <button type="button" data-view="grid">Grid Plan</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page__eyebrow">Museum Exhibit — Engineering Portfolio</div>
+    <article class="content-card">
+      {{ content }}
+    </article>
+  </main>
+
+  <a class="template-switch" href="{{ '/medical-template/' | relative_url }}">Switch to Medical</a>
+  <script>
+    (function () {
+      const root = document.body;
+      const buttons = document.querySelectorAll('[data-view-toggle] button');
+      const storageKey = 'portfolio-view';
+      const applyView = (view) => {
+        root.classList.remove('view-wall', 'view-immersive', 'view-grid');
+        root.classList.add(`view-${view}`);
+        buttons.forEach((btn) => btn.classList.toggle('active', btn.dataset.view === view));
+      };
+      const saved = localStorage.getItem(storageKey) || 'wall';
+      applyView(saved);
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          localStorage.setItem(storageKey, btn.dataset.view);
+          applyView(btn.dataset.view);
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach((el) => observer.observe(el));
+
+      const mapLinks = document.querySelectorAll('.gallery-map a');
+      const sections = Array.from(mapLinks)
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+      const mapObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            mapLinks.forEach((link) => link.classList.remove('active'));
+            const active = document.querySelector(`.gallery-map a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { threshold: 0.35 });
+      sections.forEach((section) => mapObserver.observe(section));
+    })();
+  </script>
+</body>
+</html>

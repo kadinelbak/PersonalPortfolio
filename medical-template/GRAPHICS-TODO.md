@@ -2,7 +2,7 @@
 
 ## Required Graphics (6 total)
 
-All images go in: `/medical-template/assets/img/`
+All images go in: `/assets/img/`
 
 Format: **PNG or SVG** (PNG preferred for diagrams, SVG for technical illustrations)
 Resolution: 1200px wide minimum
@@ -140,7 +140,7 @@ Example:
 - Fig 5: neurovac-pressure-modulation.png
 - Fig 6: neurovac-feedback-loop.png
 
-When you create each graphic, save it to `/medical-template/assets/img/` and the page will automatically display it.
+When you create each graphic, save it to `/assets/img/` and the page will automatically display it.
 
 ---
 

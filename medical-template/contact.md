@@ -5,8 +5,13 @@ layout: default
 
 # Contact
 
-Email: you@example.com
+![Headshot](../assets/img/headshot.jpeg)
 
-LinkedIn: https://www.linkedin.com/in/yourname
+**Kadin El Bakkouri**
 
-Optional: Link to one GitHub repo labeled "Technical appendix" (below the fold).
+- Email: [kelbakkouri@ufl.edu](mailto:kelbakkouri@ufl.edu)
+- Email (alt): [elbakkouri.kadin@gmail.com](mailto:elbakkouri.kadin@gmail.com)
+- Phone: 405-465-4320
+- LinkedIn: https://www.linkedin.com/in/kadin-el-bakkouri-09531b289/
+- GitHub: https://github.com/kadinelbak
+- MakerWorld: https://makerworld.com/en/@KadinKreates/upload
