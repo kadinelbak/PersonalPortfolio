@@ -9,5 +9,7 @@ This is a curated list of work that answers: What clinical problem exists? What 
 
 - [Disease & Treatment Modeling](_projects/disease-treatment-modeling.md)
 - [Medical Device Development](_projects/medical-device-development.md)
-- [Assistive / Prosthetics](_projects/assistive-prosthetics.md)
+- [Clinical Solutions](_projects/clinical-solutions.md)
+- [Assistive & Prosthetics](_projects/assistive-prosthetics.md)
 - [Health-Focused Data Analysis / ML](_projects/health-ml.md)
+- [Rapid Translation & Design Sprints](_projects/rapid-translation.md) *(optional)*
