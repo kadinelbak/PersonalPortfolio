@@ -36,7 +36,9 @@ That is the kind of physician I want to become.
 <strong>Gallery Map</strong>
 <ul>
   <li><a href="#exhibits">Primary Exhibits</a></li>
-  <li><a href="#research">Research Gallery</a></li>
+  <li><a href="#clinical-solutions">Clinical Solutions</a></li>
+  <li><a href="#software-solutions">Software Solutions</a></li>
+  <li><a href="#technical">Technical Depth</a></li>
   <li><a href="#leadership">Leadership & Service</a></li>
   <li><a href="#contact">Contact & Links</a></li>
 </ul>
@@ -50,18 +52,53 @@ That is the kind of physician I want to become.
 <div class="wall-scroll reveal" data-wall-scroll>
   <div class="wall-card">
     <div class="wall-card__label">Feature A</div>
-    <div class="wall-card__title">Ovarian Cancer Modeling</div>
-    <p>Interpretable growth dynamics and adaptive therapy framing for resistant populations.</p>
+    <div class="wall-card__title">Disease & Treatment Modeling</div>
+    <p>Interpretable ovarian-cancer dynamics and adaptive-therapy framing for resistant populations.</p>
   </div>
   <div class="wall-card">
     <div class="wall-card__label">Feature B</div>
-    <div class="wall-card__title">Medical Device Development</div>
-    <p>Clinical constraints translated into safe, usable device concepts.</p>
+    <div class="wall-card__title">VitalIntel — Heart Disease ML</div>
+    <p>Machine-learning workflow for early risk stratification using structured clinical and ECG-related features.</p>
   </div>
   <div class="wall-card">
     <div class="wall-card__label">Feature C</div>
+    <div class="wall-card__title">Health-Focused Data Analysis / ML</div>
+    <p>Interpretability-first analytics with clinically cautious framing and clear model boundaries.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature D</div>
+    <div class="wall-card__title">Rapid Translation & Design Sprints</div>
+    <p>Fast-cycle prototyping under ambiguity with disciplined scope and safety-aware tradeoffs.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature E</div>
+    <div class="wall-card__title">Heart Smart — CHF Education Device</div>
+    <p>Interactive CHF model translating physiology into patient-centered education and adherence support.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature F</div>
+    <div class="wall-card__title">GRiP Bike Prosthetics</div>
+    <p>Led an 8-person team delivering custom bike prosthetics to restore mobility for recipients.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature G</div>
+    <div class="wall-card__title">NeuroVac — SSFS Solution</div>
+    <p>Feedback-controlled pressure modulation concept for sunken skin flap syndrome care.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature H</div>
+    <div class="wall-card__title">Flexi-Foot (Junior Design)</div>
+    <p>Post-op forefoot offloading design balancing pressure relief, stability, and manufacturability.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature I</div>
+    <div class="wall-card__title">Medical Device Development</div>
+    <p>Needs-driven device design with clear constraints, safety priorities, and iteration logic.</p>
+  </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature J</div>
     <div class="wall-card__title">Clinical Solutions</div>
-    <p>Safety-first design for real-world care delivery.</p>
+    <p>Real-world care solutions connecting technical design to deployment and patient outcomes.</p>
   </div>
 </div>
 
@@ -74,19 +111,18 @@ That is the kind of physician I want to become.
       I built interpretable growth and interaction models to understand resistant vs. sensitive population dynamics and to inform adaptive therapy strategies. The core insight was that resistant populations show stronger density sensitivity, suggesting exploitable competitive asymmetries.
     </p>
     <div class="exhibit__links">
-      <a href="#research">See Research</a>
+      <a href="#software-solutions">See Software Solutions</a>
     </div>
   </section>
   <section class="exhibit">
     <div class="exhibit__label">Exhibit B</div>
     <div class="exhibit__title">Medical Device Development</div>
-    <div class="exhibit__meta">Clinical needs framing, design constraints, safety-focused decisions.</div>
+    <div class="exhibit__meta">CHF education and communication-focused device design.</div>
     <p>
-      This work centers on translating clinical needs into viable devices. I evaluate constraints, iterate through design tradeoffs, and prioritize usability and safety before novelty.
+      This exhibit highlights Heart Smart, a congestive heart failure (CHF) learning device built to help patients visualize disease progression and better understand prevention and treatment decisions.
     </p>
-    <img src="../assets/img/CF%20Front.jpg" alt="Designathon CHF device concept" />
     <div class="exhibit__links">
-      <a href="../assets/img/CF%20Front.jpg">View Concept Image</a>
+      <a href="_projects/heart-smart.md">Open Full CHF Exhibit</a>
     </div>
   </section>
   <section class="exhibit">
@@ -97,7 +133,7 @@ That is the kind of physician I want to become.
       I focus on clinical problems that live between insight and deployable care, emphasizing safety margins, accountability, and workflow fit.
     </p>
     <div class="exhibit__links">
-      <a href="#leadership">Care Systems</a>
+      <a href="#clinical-solutions">See Clinical Solutions</a>
     </div>
   </section>
   <section class="exhibit">
@@ -113,13 +149,13 @@ That is the kind of physician I want to become.
   </section>
   <section class="exhibit">
     <div class="exhibit__label">Exhibit E</div>
-    <div class="exhibit__title">Health-Focused Data Analysis / ML</div>
-    <div class="exhibit__meta">Interpretability, clinical caution, and bias-aware analysis.</div>
+    <div class="exhibit__title">VitalIntel — Heart Disease ML</div>
+    <div class="exhibit__meta">Early diagnostics framing, interpretable modeling, and workflow-aware triage support.</div>
     <p>
-      Data analysis work centers on interpretability and clinical boundaries, emphasizing what models can and cannot safely support.
+      I built and evaluated a heart-disease ML pipeline to support earlier risk identification while preserving clinician oversight and practical triage use.
     </p>
     <div class="exhibit__links">
-      <a href="#research">Model Limits</a>
+      <a href="_projects/vitalintel.md">Open VitalIntel Exhibit</a>
     </div>
   </section>
   <section class="exhibit">
@@ -135,11 +171,37 @@ That is the kind of physician I want to become.
   </section>
 </div>
 
-<h2 id="research" class="section-title">Research Gallery</h2>
+<h2 id="clinical-solutions" class="section-title">Clinical Solutions</h2>
+<div class="inline-grid reveal">
+  <div class="placard">
+    <strong>Heart Smart — CHF Education Device</strong>
+    <p>Interactive CHF teaching model that lets patients see fluid pooling and feel increased pumping resistance to reinforce prevention and treatment adherence.</p>
+    <p><a href="_projects/heart-smart.md">Open Heart Smart Exhibit</a></p>
+    <img src="../assets/img/heartsmart/heartsmart-01.png" alt="Heart Smart CHF device" />
+  </div>
+  <div class="placard">
+    <strong>NeuroVac — Sinking Skin Flap Syndrome</strong>
+    <p>Non-invasive pressure and depth-modulating concept for SSFS after decompressive craniectomy, with feedback-controlled regulation and portability focus.</p>
+    <p><a href="_projects/neurovac.md">Open NeuroVac Exhibit</a></p>
+    <img src="../assets/img/Neurovac/neurovacimage.png" alt="NeuroVac project image" />
+  </div>
+  <div class="placard">
+    <strong>Flexi-Foot — Forefoot Offloading</strong>
+    <p>Post-operative shoe concept balancing offloading and stability, with CAD-driven geometry and material-specific forefoot insole design.</p>
+    <p><a href="_projects/assistive-prosthetics.md">Open Flexi-Foot Exhibit</a></p>
+    <img src="../assets/img/foot/foot1.png" alt="Flexi-Foot CAD image" />
+  </div>
+</div>
+
+<h2 id="software-solutions" class="section-title">Software Solutions</h2>
 <div class="inline-grid reveal">
   <div class="placard">
     <strong>Ovarian Cancer Modeling</strong>
     <p>Multi-compartment models for treatment response and competition dynamics between drug-naÃ¯ve and resistant populations.</p>
+  </div>
+  <div class="placard">
+    <strong>VitalIntel — ML Heart Disease Detection</strong>
+    <p>Risk-prediction workflows integrating preprocessing, feature analysis, and classifier evaluation for earlier clinical escalation.</p>
   </div>
   <div class="placard">
     <strong>Longitudinal Health Data</strong>
@@ -148,6 +210,22 @@ That is the kind of physician I want to become.
   <div class="placard">
     <strong>Clinical ML Analysis</strong>
     <p>Interpretability-first models with explicit boundaries against clinical use without validation.</p>
+  </div>
+</div>
+
+<h2 id="technical" class="section-title">Technical Depth</h2>
+<div class="inline-grid reveal">
+  <div class="placard">
+    <strong>Device Design Artifacts</strong>
+    <p>Design reports, CAD summaries, and build decisions used to translate ideas into deployable prototypes.</p>
+  </div>
+  <div class="placard">
+    <strong>Modeling Pipelines</strong>
+    <p>Reusable ML workflows for preprocessing, evaluation, and interpretable risk-prediction outputs.</p>
+  </div>
+  <div class="placard">
+    <strong>Implementation Tradeoffs</strong>
+    <p>Practical constraints, safety boundaries, and iteration choices documented across project execution.</p>
   </div>
 </div>
 
