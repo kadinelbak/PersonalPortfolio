@@ -9,6 +9,7 @@ This is a curated list of work that answers: What clinical problem exists? What 
 
 ## Software Exhibits
 
+- [GRiP Admin Platform — Operations Website](_projects/grip-admin-platform.md)
 - [VitalIntel — ML Heart Disease Detection](_projects/vitalintel.md)
 - [Disease & Treatment Modeling](_projects/disease-treatment-modeling.md)
 - [Health-Focused Data Analysis / ML](_projects/health-ml.md)

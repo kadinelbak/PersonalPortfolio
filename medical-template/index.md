@@ -100,6 +100,11 @@ That is the kind of physician I want to become.
     <div class="wall-card__title">Clinical Solutions</div>
     <p>Real-world care solutions connecting technical design to deployment and patient outcomes.</p>
   </div>
+  <div class="wall-card">
+    <div class="wall-card__label">Feature K</div>
+    <div class="wall-card__title">GRiP Admin Platform</div>
+    <p>Operations website with RBAC, attendance approval history, form workflows, and validated data capture.</p>
+  </div>
 </div>
 
 <div id="exhibits" class="timeline reveal">
@@ -138,13 +143,13 @@ That is the kind of physician I want to become.
   </section>
   <section class="exhibit">
     <div class="exhibit__label">Exhibit D</div>
-    <div class="exhibit__title">Assistive & Prosthetics</div>
-    <div class="exhibit__meta">Human-centered design, continuity of care, and long-term usability.</div>
+    <div class="exhibit__title">GRiP Bike Devices & Prosthetics</div>
+    <div class="exhibit__meta">Iterative rider-centered design, steering support, and continuity through team handoff.</div>
     <p>
-      Assistive device projects are framed around the personâ€”not the deviceâ€”with emphasis on usability, communication, and continuity.
+      This work progressed from an initial prosthetic-bike interface model to a more advanced design that addressed increased steering difficulty and control demands. Through iterative CAD and fit-feedback cycles, the team improved geometry, support, and usability so recipients could ride with greater confidence.
     </p>
     <div class="exhibit__links">
-      <a href="#leadership">Service Context</a>
+      <a href="_projects/grip-bike-prosthetics.md">Open Full GRiP Exhibit</a>
     </div>
   </section>
   <section class="exhibit">
@@ -156,17 +161,6 @@ That is the kind of physician I want to become.
     </p>
     <div class="exhibit__links">
       <a href="_projects/vitalintel.md">Open VitalIntel Exhibit</a>
-    </div>
-  </section>
-  <section class="exhibit">
-    <div class="exhibit__label">Exhibit F</div>
-    <div class="exhibit__title">Rapid Translation & Design Sprints</div>
-    <div class="exhibit__meta">Ambiguity, speed, and safety tradeoffs.</div>
-    <p>
-      Short-cycle development efforts emphasized disciplined scope control, clear communication, and risk-aware decision-making.
-    </p>
-    <div class="exhibit__links">
-      <a href="#contact">Reach Out</a>
     </div>
   </section>
 </div>
@@ -196,20 +190,18 @@ That is the kind of physician I want to become.
 <h2 id="software-solutions" class="section-title">Software Solutions</h2>
 <div class="inline-grid reveal">
   <div class="placard">
+    <strong>GRiP Admin Platform — Operations Website</strong>
+    <p>Centralized member management, attendance approvals, and form workflows with role-based access and audit-ready history.</p>
+    <p><a href="_projects/grip-admin-platform.md">Open GRiP Admin Exhibit</a></p>
+  </div>
+  <div class="placard">
     <strong>Ovarian Cancer Modeling</strong>
     <p>Multi-compartment models for treatment response and competition dynamics between drug-naÃ¯ve and resistant populations.</p>
   </div>
   <div class="placard">
     <strong>VitalIntel — ML Heart Disease Detection</strong>
     <p>Risk-prediction workflows integrating preprocessing, feature analysis, and classifier evaluation for earlier clinical escalation.</p>
-  </div>
-  <div class="placard">
-    <strong>Longitudinal Health Data</strong>
-    <p>Non-clinical infrastructure for structured capture of nutrition, activity, and behavioral data.</p>
-  </div>
-  <div class="placard">
-    <strong>Clinical ML Analysis</strong>
-    <p>Interpretability-first models with explicit boundaries against clinical use without validation.</p>
+    <p><a href="_projects/vitalintel.md">Open Full VitalIntel Exhibit</a></p>
   </div>
 </div>
 

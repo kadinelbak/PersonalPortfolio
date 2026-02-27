@@ -41,3 +41,4 @@ The workflow in the report combines:
 ## Deep Link to Source Exhibit
 
 - [VitalIntel Published Design Report](https://docs.google.com/document/d/e/2PACX-1vTpEIEVWWKseOMeI5Z3GfCj4N7P16D9rR7LF7zS3gaaMkNicMZiD7-vzXuMO1B7Bg/pub)
+- [GitHub Repository](https://github.com/kadinelbak/VitalIntel)
