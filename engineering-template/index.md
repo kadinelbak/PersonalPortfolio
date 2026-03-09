@@ -208,8 +208,9 @@ This portfolio shows some of my efforts in that direction:
     <p>Design reports, CAD summaries, and verification notes used for device decisions and tradeoffs.</p>
   </div>
   <div class="placard">
-    <strong>Modeling Pipelines</strong>
-    <p>Reusable workflows for image analysis, parameter estimation, and treatment-response modeling.</p>
+    <strong>QuPath Cell Count Pipeline</strong>
+    <p>Automated histology cell counting pipeline for high-volume image batches with scripted detection, QC overlays, and export-ready summaries.</p>
+    <p><a href="_projects/qupath-cell-count-pipeline.md">Open QuPath Pipeline Exhibit</a></p>
   </div>
   <div class="placard">
     <strong>System Infrastructure</strong>

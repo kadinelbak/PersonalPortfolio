@@ -212,8 +212,9 @@ That is the kind of physician I want to become.
     <p>Design reports, CAD summaries, and build decisions used to translate ideas into deployable prototypes.</p>
   </div>
   <div class="placard">
-    <strong>Modeling Pipelines</strong>
-    <p>Reusable ML workflows for preprocessing, evaluation, and interpretable risk-prediction outputs.</p>
+    <strong>QuPath Cell Count Pipeline</strong>
+    <p>Automated cell counting workflow for large histology datasets with standardized detection, quality control, and structured output export.</p>
+    <p><a href="_projects/qupath-cell-count-pipeline.md">Open QuPath Pipeline Exhibit</a></p>
   </div>
   <div class="placard">
     <strong>Implementation Tradeoffs</strong>

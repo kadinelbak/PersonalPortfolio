@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 import markdown
 from markdown.extensions.toc import TocExtension
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parent
 TEMPLATES = {
     "medical": REPO_ROOT / "medical-template",
     "engineering": REPO_ROOT / "engineering-template",

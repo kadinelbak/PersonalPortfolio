@@ -13,6 +13,7 @@ This is a curated list of work that answers: What clinical problem exists? What 
 - [VitalIntel — ML Heart Disease Detection](_projects/vitalintel.md)
 - [Disease & Treatment Modeling](_projects/disease-treatment-modeling.md)
 - [Health-Focused Data Analysis / ML](_projects/health-ml.md)
+- [QuPath Cell Count Pipeline](_projects/qupath-cell-count-pipeline.md)
 - [Rapid Translation & Design Sprints](_projects/rapid-translation.md)
 
 ## CAD & Device Exhibits
