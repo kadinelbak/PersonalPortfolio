@@ -41,66 +41,31 @@ This portfolio shows some of my efforts in that direction:
 </div>
 
 <h2 class="section-title">Feature Wall</h2>
+<div class="feature-spotlight reveal">
 <div class="wall-controls">
   <button type="button" data-wall-prev>&larr; Prev</button>
   <button type="button" data-wall-next>Next &rarr;</button>
 </div>
-<div class="wall-scroll reveal" data-wall-scroll>
-  <div class="wall-card">
+<div class="wall-scroll" data-wall-scroll>
+  <div class="wall-card wall-card--research">
     <div class="wall-card__label">Feature A</div>
     <div class="wall-card__title">Disease & Treatment Modeling</div>
     <p>Interpretable ovarian-cancer dynamics and adaptive-therapy framing for resistant populations.</p>
+    <p><a class="wall-card__link" href="_projects/disease-treatment-modeling.md">Open Research Showcase</a></p>
   </div>
-  <div class="wall-card">
+  <div class="wall-card wall-card--qupath">
     <div class="wall-card__label">Feature B</div>
-    <div class="wall-card__title">VitalIntel — Heart Disease ML</div>
-    <p>Machine-learning workflow for early risk stratification using structured clinical and ECG-related features.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature C</div>
     <div class="wall-card__title">QuPath Cell Count Pipeline</div>
     <p>Automated recursive image ingestion, cell counting, and CSV export for large-scale analysis.</p>
+    <p><a class="wall-card__link" href="_projects/qupath-cell-count-pipeline.md">Open QuPath Pipeline</a></p>
   </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature D</div>
-    <div class="wall-card__title">Longitudinal Health Data Infrastructure</div>
-    <p>Structured non-clinical data capture architecture for research-ready longitudinal datasets.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature E</div>
-    <div class="wall-card__title">Heart Smart — CHF Education Device</div>
-    <p>Interactive CHF model translating physiology into patient-centered education and adherence support.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature F</div>
-    <div class="wall-card__title">GRiP Bike Prosthetics</div>
-    <p>Led an 8-person team delivering custom bike prosthetics to restore mobility for recipients.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature G</div>
-    <div class="wall-card__title">NeuroVac — SSFS Solution</div>
-    <p>Feedback-controlled pressure modulation concept for sunken skin flap syndrome care.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature H</div>
-    <div class="wall-card__title">Flexi-Foot (Junior Design)</div>
-    <p>Post-op forefoot offloading design balancing pressure relief, stability, and manufacturability.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature I</div>
-    <div class="wall-card__title">Medical Device Development</div>
-    <p>Needs-driven device design with clear constraints, safety priorities, and iteration logic.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature J</div>
-    <div class="wall-card__title">Clinical Solutions</div>
-    <p>Real-world care solutions connecting technical design to deployment and patient outcomes.</p>
-  </div>
-  <div class="wall-card">
-    <div class="wall-card__label">Feature K</div>
+  <div class="wall-card wall-card--admin">
+    <div class="wall-card__label">Feature C</div>
     <div class="wall-card__title">GRiP Admin Platform</div>
     <p>Operations website with RBAC, attendance approval history, form workflows, and validated data capture.</p>
+    <p><a class="wall-card__link" href="_projects/grip-admin-platform.md">Open GRiP Admin Exhibit</a></p>
   </div>
+</div>
 </div>
 
 <div id="exhibits" class="timeline reveal">
@@ -192,7 +157,7 @@ This portfolio shows some of my efforts in that direction:
   </div>
   <div class="placard">
     <strong>Ovarian Cancer Modeling</strong>
-    <p>Multi-compartment models for treatment response and competition dynamics between drug-naÃ¯ve and resistant populations.</p>
+    <p>Multi-compartment models for treatment response and competition dynamics between drug-naive and resistant populations.</p>
     <p><a href="_projects/disease-treatment-modeling.md">Open Research Showcase</a></p>
   </div>
   <div class="placard">
@@ -223,7 +188,7 @@ This portfolio shows some of my efforts in that direction:
 <div class="placard reveal">
   <p>
     My leadership has centered on sustained responsibility for people, projects, and continuity. As Vice President of GRiP, I owned project intake,
-    continuity infrastructure, and delivery boundariesâ€”balancing growth with safety and transparency for the families we serve.
+    continuity infrastructure, and delivery boundaries-balancing growth with safety and transparency for the families we serve.
   </p>
 </div>
 <div class="inline-grid reveal">
