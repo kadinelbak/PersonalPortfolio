@@ -95,6 +95,54 @@ This role required translating technical decisions into accessible language and 
 
 ---
 
+## Leadership Event Exhibits
+
+### GRiP Designathon
+
+**Role:** Organizer / Lead  
+**Scale:** 45 participants, 15 project submissions.  
+**Outcome:** 15 recipient-focused device concepts; about half are in follow-up toward completed recipient projects.
+
+**Problem**  
+Real recipient cases were available, but students needed a structured pathway to translate cases into actionable project work.
+
+**Execution**  
+Built the event from concept to delivery: case organization, participant communication, DevPost setup, logistics, judging, and follow-up pipeline.
+
+**Impact**  
+Created a repeatable annual model that converts student design work into recipient-impacting project pipelines.
+
+**Sponsors and Winners**  
+- Sponsors: UF Biomedical Engineering (1st prize), Medtronic ENT (2nd prize), Gainesville Hackerspace (3rd prize).  
+- Winners: 1st Twilight Team (Cerebral Palsy Motor Skills Toy), 2nd Bionic Blue (Adaptable Paint Brush), 3rd Joint Venture (Magnetic Writing Guidance Board).
+
+![GRiP Designathon event photo](../assets/img/Leadership/GRiPDSilly.jpg)
+
+Link: https://www.linkedin.com/posts/kadin-el-bakkouri-09531b289_adaptivedesign-assistivetechnology-biomedicalengineering-activity-7430400806060990464-g7a7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX-D7EBRFHp4z_-NMMPOMmJ6LZK6-ok7NQ
+
+---
+
+### HealthHacks
+
+**Role:** Organizer / Lead  
+**Scale:** Multi-university collaboration (UF + USF) with hardware prototyping, judging, and overnight sprint execution.  
+**Outcome:** Delivered judged prototype pitches and cross-university project execution supported by shared hardware/resources.
+
+**Problem**  
+Cross-disciplinary healthcare ideas needed focused build time, rapid prototyping resources, and execution structure.
+
+**Execution**  
+Organized participant and hardware logistics, contracts/collaborations, judging support, and hardware checkout while coordinating partner teams.
+
+**Impact**  
+Strengthened inter-institution innovation pathways and produced practical health-tech concepts under real constraints.
+
+![HealthHacks event photo](../assets/img/Leadership/HHSilly.jpg)
+
+Link: https://www.linkedin.com/posts/kadin-el-bakkouri-09531b289_innovation-biomedicalengineering-grip-activity-7382535412101152768-9i7X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX-D7EBRFHp4z_-NMMPOMmJ6LZK6-ok7NQ
+
+---
+
 ### What This Taught Me About Medicine
 This leadership experience reshaped how I think about responsibility and care delivery:
 - Systems matter as much as individual effort
@@ -104,5 +152,3 @@ This leadership experience reshaped how I think about responsibility and care de
 - Clear communication prevents harm
 
 These lessons strongly inform my interest in medicine, particularly in environments where multidisciplinary teams, uncertainty, and long-term responsibility are central.
-
-*** End Patch

@@ -26,7 +26,7 @@
   </header>
 
   <main class="page">
-    <div class="page__eyebrow">Museum Exhibit — Medical Portfolio</div>
+    <div class="page__eyebrow">Museum Exhibit - Medical Portfolio</div>
     <article class="content-card">
       {{ content }}
     </article>
@@ -96,5 +96,17 @@
       sections.forEach((section) => mapObserver.observe(section));
     })();
   </script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </body>
 </html>

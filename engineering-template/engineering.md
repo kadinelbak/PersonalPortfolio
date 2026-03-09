@@ -5,14 +5,9 @@ layout: default
 
 # Technical Depth
 
-This page exposes the engineering depth that sits beneath the same projects shown in the medical template. Use it to link technical artifacts without changing the narrative on the main pages.
+This page links implementation-level artifacts behind the core portfolio projects.
 
-- **Design Documentation:** link or embed reports (e.g., device design reports, CAD summaries)
-- **Modeling & Analysis:** link to code or notebooks for modeling workflows
-- **Systems & Infrastructure:** link to data pipelines or app architecture diagrams
-
-Recommended anchors:
-
-- [Medical Device Development](_projects/medical-device-development.md)
+- [QuPath Cell Count Pipeline](_projects/qupath-cell-count-pipeline.md)
 - [Disease & Treatment Modeling](_projects/disease-treatment-modeling.md)
+- [Longitudinal Health Data Infrastructure](_projects/longitudinal-health-data.md)
 - [Clinical Solutions](_projects/clinical-solutions.md)

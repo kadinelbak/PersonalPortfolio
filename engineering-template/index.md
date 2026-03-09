@@ -58,13 +58,13 @@ This portfolio shows some of my efforts in that direction:
   </div>
   <div class="wall-card">
     <div class="wall-card__label">Feature C</div>
-    <div class="wall-card__title">Health-Focused Data Analysis / ML</div>
-    <p>Interpretability-first analytics with clinically cautious framing and clear model boundaries.</p>
+    <div class="wall-card__title">QuPath Cell Count Pipeline</div>
+    <p>Automated recursive image ingestion, cell counting, and CSV export for large-scale analysis.</p>
   </div>
   <div class="wall-card">
     <div class="wall-card__label">Feature D</div>
-    <div class="wall-card__title">Rapid Translation & Design Sprints</div>
-    <p>Fast-cycle prototyping under ambiguity with disciplined scope and safety-aware tradeoffs.</p>
+    <div class="wall-card__title">Longitudinal Health Data Infrastructure</div>
+    <p>Structured non-clinical data capture architecture for research-ready longitudinal datasets.</p>
   </div>
   <div class="wall-card">
     <div class="wall-card__label">Feature E</div>
@@ -193,6 +193,7 @@ This portfolio shows some of my efforts in that direction:
   <div class="placard">
     <strong>Ovarian Cancer Modeling</strong>
     <p>Multi-compartment models for treatment response and competition dynamics between drug-naÃ¯ve and resistant populations.</p>
+    <p><a href="_projects/disease-treatment-modeling.md">Open Research Showcase</a></p>
   </div>
   <div class="placard">
     <strong>VitalIntel — ML Heart Disease Detection</strong>
@@ -224,6 +225,30 @@ This portfolio shows some of my efforts in that direction:
     My leadership has centered on sustained responsibility for people, projects, and continuity. As Vice President of GRiP, I owned project intake,
     continuity infrastructure, and delivery boundariesâ€”balancing growth with safety and transparency for the families we serve.
   </p>
+</div>
+<div class="inline-grid reveal">
+  <div class="placard">
+    <strong>GRiP Designathon</strong>
+    <p><strong>Role:</strong> Organizer / Lead</p>
+    <p><strong>Scale:</strong> 45 participants, 15 project submissions.</p>
+    <p><strong>Outcome:</strong> 15 recipient-focused device concepts; about half are in follow-up toward completed recipient projects.</p>
+    <p><strong>Problem:</strong> Real recipient cases were available, but students needed a structured pathway to translate cases into actionable project work.</p>
+    <p><strong>Execution:</strong> Built the event from concept to delivery: case organization, participant communication, DevPost setup, logistics, judging, and follow-up pipeline.</p>
+    <p><strong>Impact:</strong> Created a repeatable annual model that converts student design work into recipient-impacting project pipelines.</p>
+    <img src="../assets/img/Leadership/GRiPDSilly.jpg" alt="GRiP Designathon event photo" />
+    <p><a href="https://www.linkedin.com/posts/kadin-el-bakkouri-09531b289_adaptivedesign-assistivetechnology-biomedicalengineering-activity-7430400806060990464-g7a7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX-D7EBRFHp4z_-NMMPOMmJ6LZK6-ok7NQ">View LinkedIn Post</a></p>
+  </div>
+  <div class="placard">
+    <strong>HealthHacks</strong>
+    <p><strong>Role:</strong> Organizer / Lead</p>
+    <p><strong>Scale:</strong> Multi-university collaboration (UF + USF) with hardware prototyping, judging, and overnight sprint execution.</p>
+    <p><strong>Outcome:</strong> Delivered judged prototype pitches and cross-university project execution supported by shared hardware/resources.</p>
+    <p><strong>Problem:</strong> Cross-disciplinary healthcare ideas needed focused build time, rapid prototyping resources, and execution structure.</p>
+    <p><strong>Execution:</strong> Organized participant and hardware logistics, contracts/collaborations, judging support, and hardware checkout while coordinating partner teams.</p>
+    <p><strong>Impact:</strong> Strengthened inter-institution innovation pathways and produced practical health-tech concepts under real constraints.</p>
+    <img src="../assets/img/Leadership/HHSilly.jpg" alt="HealthHacks event photo" />
+    <p><a href="https://www.linkedin.com/posts/kadin-el-bakkouri-09531b289_innovation-biomedicalengineering-grip-activity-7382535412101152768-9i7X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX-D7EBRFHp4z_-NMMPOMmJ6LZK6-ok7NQ">View LinkedIn Post</a></p>
+  </div>
 </div>
 
 <h2 id="contact" class="section-title">Contact & Links</h2>

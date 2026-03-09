@@ -187,6 +187,19 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             sections.forEach((section) => mapObserver.observe(section));
         }})();
     </script>
+    <script>
+        window.MathJax = {{
+            tex: {{
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }},
+            options: {{
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }}
+        }};
+    </script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </body>
 </html>"""
 

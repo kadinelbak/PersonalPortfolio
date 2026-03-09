@@ -1,154 +1,170 @@
 ---
-title: Disease & Treatment Modeling
-layout: page
----
-
-## Disease & Treatment Modeling in Ovarian Cancer
-
-### Biological Context
-Ovarian cancer is characterized by high rates of recurrence and treatment resistance, making it a prime candidate for therapeutic strategies that move beyond maximum tolerated dose (MTD) paradigms. A growing body of theory suggests that resistance can be shaped by **competitive interactions between drug-naïve and resistant cell populations**, raising the possibility that adaptive therapy may improve long-term control by exploiting these dynamics rather than attempting eradication.
-
-However, translating these ideas into practice requires **data-driven, interpretable models** that connect observable experimental measurements to biologically meaningful mechanisms.
-
----
-
-## Core Question
-**Can data-driven growth and interaction models reveal exploitable asymmetries between drug-naïve and resistant ovarian cancer cell populations that inform adaptive therapy strategies?**
-
-This work aims to answer that question by integrating scalable measurement, phenomenological modeling, and interaction analysis across monoculture and co-culture experimental conditions.
-
----
-
-## Measurement & Reproducibility Pipeline
-The project began with a practical measurement challenge: manual cell counting from fluorescent microscopy images does not scale and introduces subjectivity. Before automating analysis, I first established **biologically meaningful definitions of what constituted a cell**, validating automated threshold-based approaches against manual counts.
-
-This resulted in a reproducible image-analysis pipeline that enabled rapid, consistent quantification of cell populations across plates, conditions, and timepoints. Establishing reliable measurement was essential before any modeling could be meaningfully interpreted.
-
----
-
-## Modeling Single-Population Growth Dynamics
-To understand baseline behavior, I first modeled monoculture growth of drug-naïve and resistant ovarian cancer cell lines.
-
-Rather than assuming exponential growth, I used a **generalized (θ-)logistic formulation** to capture density-dependent effects. This allowed intra-population competition to be expressed flexibly and compared across phenotypes.
-
-**Key insight:**  
-Resistant populations exhibited substantially greater sensitivity to density-dependent constraints than naïve populations. In contrast, naïve cells were comparatively robust to crowding effects. This asymmetry suggests that resistance carries an intrinsic fitness cost that becomes apparent under competitive pressure.
-
----
-
-## Mechanistic Treatment Response via Multi-Compartment Modeling
-To interpret treated conditions, I developed a **phenomenological multi-compartment model** representing observable treatment-response states rather than attempting a full molecular description.
-
-Cells transition between:
-- **Healthy**
-- **Damaged**
-- **Arrested**
-
-Cell death was constrained to occur only from the arrested compartment, reflecting experimentally observed dynamics. While simplified, this structure allowed treatment effects to be expressed mechanistically and fit complex response geometries seen in the data.
-
-This approach emphasized interpretability over maximal complexity, enabling direct reasoning about how therapies alter population trajectories.
-
----
-
-## Competitive Interactions in Untreated Co-Culture
-The most informative results emerged in untreated co-culture experiments. Interaction terms revealed **asymmetric competition**:
-
-- Resistant populations were strongly suppressed by the presence of naïve cells.
-- Naïve populations showed little sensitivity to resistant cell abundance.
-
-These findings are **consistent with competition-based resistance theory**, suggesting that resistant cells may persist primarily when ecological pressure from naïve populations is removed.
-
----
-
-## Implications for Adaptive Therapy
-Taken together, these results support a framework in which:
-- Resistance is not merely drug-induced, but context-dependent
-- Competitive suppression may be leveraged therapeutically
-- Growth-trajectory–level interpretation provides more insight than endpoint measurements alone
-
-The long-term goal of this work is to inform **adaptive therapy schedules** that intentionally preserve drug-sensitive populations to suppress resistant ones, rather than eliminating all sensitive cells via MTD.
-
----
-
-## Model Limits & Experimental Constraints
-Several important limitations currently bound interpretation:
-
-- **Carrying capacity** in in-vitro systems may not map cleanly to in-vivo tumor environments, limiting direct translational extrapolation.
-- **Effective drug concentration over time** is uncertain due to degradation and uptake dynamics in culture media, introducing parameter uncertainty in treated conditions.
-- While interaction asymmetries are robust in untreated co-culture, **treated co-culture experiments are required** to validate model-based adaptive therapy predictions.
-
-These limits motivate ongoing experimental work rather than undermine the modeling framework.
-
----
-
-## Reproducibility & Future Work
-This project is being developed as part of an undergraduate senior thesis and is currently **unpublished**. In parallel, I am packaging the parameter estimation methods and image-analysis workflows into reusable tools to support reproducible modeling in other experimental cancer systems.
-
-Next steps include:
-- Treated co-culture experiments to test adaptive therapy hypotheses
-- Explicit modeling of time-varying drug exposure
-- Refinement of model identifiability under constrained data regimes
-
----
-
-## Selected Artifacts
-- **Compartmental model schematic** (phenomenological treatment response)
-- **Untreated co-culture growth dynamics** (asymmetric competition)
-- **Adaptive therapy schedule simulations** (conceptual)
-
-*Technical implementation details and code are available as a supporting appendix.*
----
-title: Disease & Treatment Modeling
+title: Research Showcase - Dynamical Modeling of Cancer Cell Growth Dynamics
 layout: project
 ---
 
-## Clinical Motivation
+## Problem and Motivation
 
-[**PLACEHOLDER**: Describe the clinical variability in treatment response—what specific disease and patient population? Why does this matter?]
+Cancer populations change growth behavior under different environmental and treatment conditions. Raw time-series cell counts capture these trends, but they do not directly identify the parameters governing proliferation, crowding effects, or competition. This project builds a reproducible ODE-based fitting workflow to estimate interpretable parameters across monoculture and coculture systems.
 
-Example framing: *Why do some patients respond to this treatment while others don't? Understanding this variability is critical because [clinical consequence].*
+---
 
-## Question
+## Modeling Framework
 
-Can simple, interpretable models quantify treatment effect heterogeneity to inform clinical decisions?
+General workflow:
 
-## Approach (high-level)
+1. Load experimental datasets.
+2. Select model structure (monoculture or coculture).
+3. Solve ODE systems numerically.
+4. Fit parameters with least-squares optimization.
+5. Evaluate fit quality with SSE, AIC, and BIC.
+6. Export fitted parameters for cross-condition comparison.
 
-[**PLACEHOLDER**: Describe your modeling strategy. Include:]
-- Growth dynamics model (logistic, Gompertz, etc.)
-- Parameter estimation method (data source, technique)
-- Treatment response quantification
-- Uncertainty/identifiability considerations
+![Research stage flow](../../assets/img/research-showcase/research_stage_flow.png)
+*Figure 1: Progression used in this showcase, ending with treated coculture as the final integration stage.*
 
-Example: *We parameterized logistic growth models from published cohorts, estimated treatment-induced changes in growth rate, and quantified parameter identifiability to bound clinical interpretability.*
+---
 
-## Key Results
+## 1) Untreated Monoculture Growth
 
-[**PLACEHOLDER**: 2–3 figures showing:]
-1. Growth curves (untreated vs treated trajectories)
-2. Dose–parameter relationship or heterogeneity distribution
-3. Model fit or validation comparison
+Untreated monoculture growth was compared with standard logistic and theta-logistic forms.
 
-*Include brief interpretation of each.*
+Standard logistic:
 
-## What I Learned
+$$
+\frac{dN}{dt} = rN\left(1-\frac{N}{K}\right)
+$$
 
-[**PLACEHOLDER**: What did this work teach you about modeling, uncertainty, or medicine? Examples:]
-- Handling censored data and communicating bounds to clinicians
-- Trade-offs between model complexity and interpretability
-- Importance of sensitivity analysis in treatment planning
+Theta-logistic (generalized logistic):
 
-## Connection to Medicine
+$$
+\frac{dN}{dt} = rN\left(1-\left(\frac{N}{K}\right)^v\right)
+$$
 
-[**PLACEHOLDER**: How does this inform clinical practice? Example:]
-*Results identified subgroups likely to benefit from early intervention, suggesting a patient-stratification strategy for [clinical scenario].*
+Interpretation:
+- `N(t)` is the cell count at time `t`.
+- Growth is approximately exponential when `N` is small.
+- Growth slows as `N` approaches `K`.
+- `v` controls curvature/strength of density dependence.
+- `v = 1` reduces theta-logistic to standard logistic.
 
-## Technical Resources
+Parameter definitions:
+- `r`: intrinsic growth rate (day^-1)
+- `K`: carrying capacity (cells)
+- `v`: shape/curvature parameter for density dependence (theta-logistic only)
 
-[Optional] GitHub repositories for methods & implementation:
-- [Cancer Growth Dynamics](https://github.com/kadinelbak/[REPO-NAME])
-- [Parameter Estimation](https://github.com/kadinelbak/[REPO-NAME])
+Model-selection note (from `monoculture_model_bic_results.csv`):
+- Naive monoculture: standard logistic had slightly lower BIC than theta-logistic (`321.28` vs `322.58`).
+- Resistant monoculture: theta-logistic had much lower BIC than standard logistic (`405.62` vs `441.83`), indicating better fit for resistant growth geometry.
 
-## Artifacts
+![Untreated monoculture logistic fit](../../assets/img/research-showcase/untreated_monoculture_logistic_fit.png)
+*Figure 2: Untreated monoculture logistic-fit example (data vs fitted curve).*
 
-- Technical appendix: link to one GitHub repo and one PDF in `/assets/pdf/`.
+![Untreated monoculture resistant fit](../../assets/img/research-showcase/untreated_monoculture_resistant_logistic_fit.png)
+*Figure 3: Resistant untreated monoculture fit, where theta-logistic form improved BIC relative to standard logistic.*
+
+---
+
+## 2) Untreated Coculture
+
+Untreated coculture experiments were used to estimate interaction behavior between sensitive and resistant populations under shared-resource conditions.
+
+Model equations:
+
+$$
+\frac{dS}{dt} = r_S S\left(1-\frac{S + \alpha_{SR}R}{K}\right)
+$$
+
+$$
+\frac{dR}{dt} = r_R R\left(1-\frac{R + \alpha_{RS}S}{K}\right)
+$$
+
+Interpretation:
+- Sensitive (`S`) and resistant (`R`) populations both grow under density limits.
+- Competition coefficients (`aSR`, `aRS`) encode how strongly one population suppresses the other.
+- Asymmetry in `aSR` vs `aRS` quantifies ecological advantage.
+
+Parameter definitions:
+- `S(t)`: sensitive population count
+- `R(t)`: resistant population count
+- `rS`, `rR`: intrinsic growth rates
+- `K`: shared carrying capacity
+- `aSR`: effect of resistant cells on sensitive growth
+- `aRS`: effect of sensitive cells on resistant growth
+
+![Untreated coculture panel 30k 25 75](../../assets/img/research-showcase/untreated_coculture_top5_panels_30k_25_75.png)
+*Figure 4: Untreated coculture model panels (30k, 25/75 composition).*
+
+![Untreated coculture panel 20k 50 50](../../assets/img/research-showcase/untreated_coculture_top5_panels_20k_50_50.png)
+*Figure 5: Untreated coculture model panels (20k, 50/50 composition).*
+
+---
+
+## 3) Treated Monoculture
+
+Treated monoculture was modeled using a multi-compartment drug-response formulation to capture delayed effects and state transitions.
+
+Model equations:
+
+$$
+\frac{dS}{dt} = rS\left(1-\frac{S+\sum_i C_i}{K}\right)-kS
+$$
+
+$$
+\frac{dC_1}{dt} = kS-kC_1,\quad
+\frac{dC_2}{dt} = kC_1-kC_2,\quad
+\ldots,\quad
+\frac{dC_n}{dt} = kC_{n-1}-dC_n
+$$
+
+$$
+N_{\text{total}} = S+\sum_i C_i
+$$
+
+Interpretation:
+- Cells transition from proliferative to drug-affected states.
+- Intermediate compartments capture delayed treatment effects.
+- Terminal compartment includes death/removal through `d`.
+
+Parameter definitions:
+- `S(t)`: proliferative sensitive cells
+- `Ci(t)`: treated/damaged compartment `i`
+- `r`: intrinsic growth rate
+- `K`: carrying capacity
+- `k`: drug-induced transition rate between states
+- `d`: terminal death rate
+
+![Treated monoculture best grid](../../assets/img/research-showcase/treated_monoculture_best_grid_30k.png)
+*Figure 6: Best treated-monoculture fit grid (30k condition).*
+
+![Treated monoculture top 5 grid](../../assets/img/research-showcase/treated_monoculture_top5_grid_30k.png)
+*Figure 7: Top treated-monoculture model comparison grid (30k condition).*
+
+---
+
+## 4) Treated Coculture (Final Stage)
+
+Treated coculture is the final stage because it combines treatment effects with ecological competition dynamics in the same system. This stage is where adaptive-therapy hypotheses can be tested directly under treatment pressure and mixed-population interaction.
+
+Conceptual treated-coculture form:
+
+$$
+\frac{dS}{dt} = r_S S\left(1-\frac{S+\alpha_{SR}R}{K}\right)-k_S S
+$$
+
+$$
+\frac{dR}{dt} = r_R R\left(1-\frac{R+\alpha_{RS}S}{K}\right)-k_R R
+$$
+
+Extended treated-state compartments can be added per population to model delayed response and recovery dynamics.
+
+Additional parameter definitions:
+- `kS`, `kR`: treatment-effect transition rates for sensitive/resistant populations
+
+Current page structure is now set so treated-coculture figures can be dropped in as the final results section as soon as that dataset/plot is added.
+
+---
+
+## Impact
+
+This workflow converts experimental growth curves into interpretable parameters that can be compared across conditions. It supports reproducible analysis from monoculture baseline fitting through coculture interaction modeling, with treated coculture as the final decision-relevant integration step.
