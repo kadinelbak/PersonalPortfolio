@@ -4,217 +4,178 @@ layout: default
 ---
 
 <div class="hero">
-  <div class="hero__title">Museum of Clinical Systems & Care</div>
-  <div class="hero__subtitle">I design and build systems that move from problem definition to real-world deployment under technical and human constraints.</div>
+  <div class="hero__title">Hybrid Biomedical Engineering Portfolio</div>
+  <div class="hero__subtitle">I combine device design, computational modeling, and team leadership to move health-tech ideas from first principles to deployable systems.</div>
 </div>
 
-I believe a selfless life will leave you most fulfilled, so I live life off the principle that you reap what you sow. This starts with people. People are the center to why we do what we do. The relationships we build provide value to our lives.
+I believe a selfless life will leave you most fulfilled, so I live life off the principle that you reap what you sow. This starts with people. People are the center of why we do what we do. The relationships we build provide value to our lives.
 
-I have experienced this with my parents and the friendship we have built through sustained effort. I have seen it with the mentees in my organization who now invest their full efforts because they feel valued. I have felt it with friends who help without hesitation and with whom I do the same. I have been thankful to be able to build a community around myself whether within GRiP, board game nights in my apartment, or through volunteering and I strive to spread my wings as far as possible within it.
+I have experienced this with my parents and the friendship we have built through sustained effort. I have seen it with the mentees in my organization who now invest their full effort because they feel valued. I have felt it with friends who help without hesitation and with whom I do the same. I have been thankful to build a community around myself, whether within GRiP, board game nights in my apartment, or through volunteering, and I try to spread that outward.
 
-To sustain those relationships and provide meaningful help, I have learned to combine three things: **technical and engineering systems thinking**, **biological and mechanistic insights**, and **genuine personal relationship**. This approach allows me to solve problems at their root cause rather than their surface.
+To sustain those relationships and provide meaningful help, I have learned to combine three things: **technical and engineering systems thinking**, **biological and mechanistic insights**, and **genuine personal relationship**. This approach allows me to solve problems at their root cause rather than at their surface.
 
 ---
 
-## Why This Matters for Engineering
+## Why This Matters in Biotech
 
-Engineering is fundamentally about people and systems. A deployment affects not just performance metrics, but user trust, workflow stability, and long-term maintainability. The best systems acknowledge this complexity that understand context, respect constraints, and prioritize continuity.
+Biotech work sits at the intersection of physical systems, computational reasoning, and human trust. The strongest projects are not just technically correct. They show how theory becomes a model, how a model becomes a device or workflow, and how that work holds up in the hands of real people.
 
-This portfolio shows some of my efforts in that direction:
+This portfolio is strongest when it shows that transition clearly:
 
 - Disease & Treatment Modeling explores how quantitative reasoning can reveal exploitable biology to improve therapeutic strategy.
-- Leadership & Service documents how operational infrastructure and clear communication enable reliable care for vulnerable populations.
-- Clinical Solutions demonstrate design that begins with clinical constraints and user behavior, not technical novelty.
+- Clinical Solutions demonstrate design that begins with user constraints, manufacturability, and safety boundaries rather than novelty alone.
+- Leadership and service document the operational side of engineering work: continuity, communication, and execution through teams.
 
 ---
 
 <div id="gallery" class="gallery-map reveal">
 <strong>Gallery Map</strong>
 <ul>
-  <li><a href="#exhibits">Primary Exhibits</a></li>
-  <li><a href="#clinical-solutions">Clinical Solutions</a></li>
-  <li><a href="#software-solutions">Software Solutions</a></li>
-  <li><a href="#technical">Technical Depth</a></li>
-  <li><a href="#leadership">Leadership & Service</a></li>
+  <li><a href="#matrix">Project Matrix</a></li>
   <li><a href="#contact">Contact & Links</a></li>
 </ul>
 </div>
 
-<h2 class="section-title">Feature Wall</h2>
-<div class="feature-spotlight reveal">
-<div class="wall-controls">
-  <button type="button" data-wall-prev>&larr; Prev</button>
-  <button type="button" data-wall-next>Next &rarr;</button>
-</div>
-<div class="wall-scroll" data-wall-scroll>
-  <div class="wall-card wall-card--research">
-    <div class="wall-card__label">Feature A</div>
-    <div class="wall-card__title">Disease & Treatment Modeling</div>
-    <p>Interpretable ovarian-cancer dynamics and adaptive-therapy framing for resistant populations.</p>
-    <p><a class="wall-card__link" href="_projects/disease-treatment-modeling.md">Open Research Showcase</a></p>
-  </div>
-  <div class="wall-card wall-card--qupath">
-    <div class="wall-card__label">Feature B</div>
-    <div class="wall-card__title">QuPath Cell Count Pipeline</div>
-    <p>Automated recursive image ingestion, cell counting, and CSV export for large-scale analysis.</p>
-    <p><a class="wall-card__link" href="_projects/qupath-cell-count-pipeline.md">Open QuPath Pipeline</a></p>
-  </div>
-  <div class="wall-card wall-card--admin">
-    <div class="wall-card__label">Feature C</div>
-    <div class="wall-card__title">GRiP Admin Platform</div>
-    <p>Operations website with RBAC, attendance approval history, form workflows, and validated data capture.</p>
-    <p><a class="wall-card__link" href="_projects/grip-admin-platform.md">Open GRiP Admin Exhibit</a></p>
-  </div>
-</div>
-</div>
-
-<div id="exhibits" class="timeline reveal">
-  <section class="exhibit">
-    <div class="exhibit__label">Exhibit A</div>
-    <div class="exhibit__title">Disease & Treatment Modeling in Ovarian Cancer</div>
-    <div class="exhibit__meta">Quantitative growth models, adaptive therapy framing, reproducible measurement pipelines.</div>
-    <p>
-      I built interpretable growth and interaction models to understand resistant vs. sensitive population dynamics and to inform adaptive therapy strategies. The core insight was that resistant populations show stronger density sensitivity, suggesting exploitable competitive asymmetries.
-    </p>
-    <div class="exhibit__links">
-      <a href="#software-solutions">See Software Solutions</a>
+<section id="matrix" class="bento-shell reveal">
+  <div class="bento-heading">
+    <div>
+      <div class="bento-kicker">Project Matrix</div>
+      <h2 class="section-title">Mechanical, Computational, and Leadership Work</h2>
+      <p class="bento-intro">The grid is weighted toward math modeling as the anchor project, then balanced with device design, infrastructure, and execution work.</p>
     </div>
-  </section>
-  <section class="exhibit">
-    <div class="exhibit__label">Exhibit B</div>
-    <div class="exhibit__title">Medical Device Development</div>
-    <div class="exhibit__meta">CHF education and communication-focused device design.</div>
-    <p>
-      This exhibit highlights Heart Smart, a congestive heart failure (CHF) learning device built to help patients visualize disease progression and better understand prevention and treatment decisions.
-    </p>
-    <div class="exhibit__links">
-      <a href="_projects/heart-smart.md">Open Full CHF Exhibit</a>
+    <div class="bento-filters" data-bento-filters>
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="mechanical" aria-pressed="false">Mechanical</button>
+      <button type="button" data-filter="computational" aria-pressed="false">Computational</button>
+      <button type="button" data-filter="leadership" aria-pressed="false">Leadership</button>
     </div>
-  </section>
-  <section class="exhibit">
-    <div class="exhibit__label">Exhibit C</div>
-    <div class="exhibit__title">Clinical Solutions</div>
-    <div class="exhibit__meta">Problem definition, safety constraints, and real-world deployment considerations.</div>
-    <p>
-      I focus on clinical problems that live between insight and deployable care, emphasizing safety margins, accountability, and workflow fit.
-    </p>
-    <div class="exhibit__links">
-      <a href="#clinical-solutions">See Clinical Solutions</a>
-    </div>
-  </section>
-  <section class="exhibit">
-    <div class="exhibit__label">Exhibit D</div>
-    <div class="exhibit__title">GRiP Bike Devices & Prosthetics</div>
-    <div class="exhibit__meta">Iterative rider-centered design, steering support, and continuity through team handoff.</div>
-    <p>
-      This work progressed from an initial prosthetic-bike interface model to a more advanced design that addressed increased steering difficulty and control demands. Through iterative CAD and fit-feedback cycles, the team improved geometry, support, and usability so recipients could ride with greater confidence.
-    </p>
-    <div class="exhibit__links">
-      <a href="_projects/grip-bike-prosthetics.md">Open Full GRiP Exhibit</a>
-    </div>
-  </section>
-  <section class="exhibit">
-    <div class="exhibit__label">Exhibit E</div>
-    <div class="exhibit__title">VitalIntel — Heart Disease ML</div>
-    <div class="exhibit__meta">Early diagnostics framing, interpretable modeling, and workflow-aware triage support.</div>
-    <p>
-      I built and evaluated a heart-disease ML pipeline to support earlier risk identification while preserving clinician oversight and practical triage use.
-    </p>
-    <div class="exhibit__links">
-      <a href="_projects/vitalintel.md">Open VitalIntel Exhibit</a>
-    </div>
-  </section>
-</div>
+  </div>
 
-<h2 id="clinical-solutions" class="section-title">Clinical Solutions</h2>
-<div class="inline-grid reveal">
-  <div class="placard">
-    <strong>Heart Smart — CHF Education Device</strong>
-    <p>Interactive CHF teaching model that lets patients see fluid pooling and feel increased pumping resistance to reinforce prevention and treatment adherence.</p>
-    <p><a href="_projects/heart-smart.md">Open Heart Smart Exhibit</a></p>
-    <img src="../assets/img/heartsmart/heartsmart-01.png" alt="Heart Smart CHF device" />
-  </div>
-  <div class="placard">
-    <strong>NeuroVac — Sinking Skin Flap Syndrome</strong>
-    <p>Non-invasive pressure and depth-modulating concept for SSFS after decompressive craniectomy, with feedback-controlled regulation and portability focus.</p>
-    <p><a href="_projects/neurovac.md">Open NeuroVac Exhibit</a></p>
-    <img src="../assets/img/Neurovac/neurovacimage.png" alt="NeuroVac project image" />
-  </div>
-  <div class="placard">
-    <strong>Flexi-Foot — Forefoot Offloading</strong>
-    <p>Post-operative shoe concept balancing offloading and stability, with CAD-driven geometry and material-specific forefoot insole design.</p>
-    <p><a href="_projects/assistive-prosthetics.md">Open Flexi-Foot Exhibit</a></p>
-    <img src="../assets/img/foot/foot1.png" alt="Flexi-Foot CAD image" />
-  </div>
-</div>
+  <div class="bento-grid">
+    <article class="bento-card bento-card--modeling bento-card--hero" data-bento-card data-category="computational">
+      <div class="bento-card__meta">Computational | Research Anchor</div>
+      <h3 class="bento-card__title">Disease &amp; Treatment Modeling</h3>
+      <p class="bento-card__copy">Built interpretable ovarian-cancer population models to study resistant versus sensitive dynamics and frame adaptive therapy around exploitable competition.</p>
+      <div class="bento-card__chips">
+        <span>Population dynamics</span>
+        <span>Adaptive therapy</span>
+        <span>Mechanistic interpretation</span>
+      </div>
+      <div class="bento-card__equation">$$\frac{dR}{dt}=r_R R\left(1-\frac{R+\alpha S}{K_R}\right)$$</div>
+      <p><a class="bento-card__link" href="_projects/disease-treatment-modeling.md">Open research showcase</a></p>
+    </article>
 
-<h2 id="software-solutions" class="section-title">Software Solutions</h2>
-<div class="inline-grid reveal">
-  <div class="placard">
-    <strong>GRiP Admin Platform — Operations Website</strong>
-    <p>Centralized member management, attendance approvals, and form workflows with role-based access and audit-ready history.</p>
-    <p><a href="_projects/grip-admin-platform.md">Open GRiP Admin Exhibit</a></p>
-  </div>
-  <div class="placard">
-    <strong>Ovarian Cancer Modeling</strong>
-    <p>Multi-compartment models for treatment response and competition dynamics between drug-naive and resistant populations.</p>
-    <p><a href="_projects/disease-treatment-modeling.md">Open Research Showcase</a></p>
-  </div>
-  <div class="placard">
-    <strong>VitalIntel — ML Heart Disease Detection</strong>
-    <p>Risk-prediction workflows integrating preprocessing, feature analysis, and classifier evaluation for earlier clinical escalation.</p>
-    <p><a href="_projects/vitalintel.md">Open Full VitalIntel Exhibit</a></p>
-  </div>
-</div>
+    <article class="bento-card bento-card--heart bento-card--wide" data-bento-card data-category="mechanical">
+      <div class="bento-card__meta">Mechanical | Patient Education Device</div>
+      <h3 class="bento-card__title">Heart Smart</h3>
+      <p class="bento-card__copy">A CHF teaching device that turns fluid pooling and cardiac workload into something patients can see and feel.</p>
+      <div class="bento-card__chips">
+        <span>SolidWorks</span>
+        <span>Human factors</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/heart-smart.md">Open device exhibit</a></p>
+    </article>
 
-<h2 id="technical" class="section-title">Technical Depth</h2>
-<div class="inline-grid reveal">
-  <div class="placard">
-    <strong>Device Design Artifacts</strong>
-    <p>Design reports, CAD summaries, and verification notes used for device decisions and tradeoffs.</p>
-  </div>
-  <div class="placard">
-    <strong>QuPath Cell Count Pipeline</strong>
-    <p>Automated histology cell counting pipeline for high-volume image batches with scripted detection, QC overlays, and export-ready summaries.</p>
-    <p><a href="_projects/qupath-cell-count-pipeline.md">Open QuPath Pipeline Exhibit</a></p>
-  </div>
-  <div class="placard">
-    <strong>System Infrastructure</strong>
-    <p>Data capture architecture and documentation for longitudinal health data projects.</p>
-  </div>
-</div>
+    <article class="bento-card bento-card--admin" data-bento-card data-category="computational leadership">
+      <div class="bento-card__meta">Computational + Leadership | Operations</div>
+      <h3 class="bento-card__title">GRiP Admin Platform</h3>
+      <p class="bento-card__copy">Designed internal infrastructure for approvals, attendance history, and role-aware workflows so projects could scale without losing accountability.</p>
+      <div class="bento-card__chips">
+        <span>RBAC</span>
+        <span>Audit history</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/grip-admin-platform.md">Open platform exhibit</a></p>
+    </article>
 
-<h2 id="leadership" class="section-title">Leadership & Service</h2>
-<div class="placard reveal">
-  <p>
-    My leadership has centered on sustained responsibility for people, projects, and continuity. As Vice President of GRiP, I owned project intake,
-    continuity infrastructure, and delivery boundaries-balancing growth with safety and transparency for the families we serve.
-  </p>
-</div>
-<div class="inline-grid reveal">
-  <div class="placard">
-    <strong>GRiP Designathon</strong>
-    <p><strong>Role:</strong> Organizer / Lead</p>
-    <p><strong>Scale:</strong> 45 participants, 15 project submissions.</p>
-    <p><strong>Outcome:</strong> 15 recipient-focused device concepts; about half are in follow-up toward completed recipient projects.</p>
-    <p><strong>Problem:</strong> Real recipient cases were available, but students needed a structured pathway to translate cases into actionable project work.</p>
-    <p><strong>Execution:</strong> Built the event from concept to delivery: case organization, participant communication, DevPost setup, logistics, judging, and follow-up pipeline.</p>
-    <p><strong>Impact:</strong> Created a repeatable annual model that converts student design work into recipient-impacting project pipelines.</p>
-    <img src="../assets/img/Leadership/GRiPDSilly.jpg" alt="GRiP Designathon event photo" />
-    <p><a href="https://www.linkedin.com/posts/kadin-el-bakkouri-09531b289_adaptivedesign-assistivetechnology-biomedicalengineering-activity-7430400806060990464-g7a7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX-D7EBRFHp4z_-NMMPOMmJ6LZK6-ok7NQ">View LinkedIn Post</a></p>
+    <article class="bento-card bento-card--grip" data-bento-card data-category="mechanical leadership">
+      <div class="bento-card__meta">Mechanical + Leadership | Assistive Design</div>
+      <h3 class="bento-card__title">GRiP Bike Prosthetics</h3>
+      <p class="bento-card__copy">Iterated rider-centered CAD with fit feedback and team handoff discipline to deliver custom cycling support for recipients.</p>
+      <div class="bento-card__chips">
+        <span>8-person team</span>
+        <span>CAD iteration</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/grip-bike-prosthetics.md">Open full exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--vitalintel" data-bento-card data-category="computational">
+      <div class="bento-card__meta">Computational | Clinical ML</div>
+      <h3 class="bento-card__title">VitalIntel</h3>
+      <p class="bento-card__copy">Built a heart-disease risk workflow using preprocessing, feature analysis, and classifier benchmarking for earlier escalation support.</p>
+      <div class="bento-card__chips">
+        <span>Logistic regression</span>
+        <span>ECG features</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/vitalintel.md">Open ML exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--qupath" data-bento-card data-category="computational">
+      <div class="bento-card__meta">Computational | Analysis Pipeline</div>
+      <h3 class="bento-card__title">QuPath Cell Count Pipeline</h3>
+      <p class="bento-card__copy">Automated large-batch image ingestion, cell detection, and export workflows for reproducible histology analysis.</p>
+      <div class="bento-card__chips">
+        <span>Automation</span>
+        <span>QC overlays</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/qupath-cell-count-pipeline.md">Open pipeline exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--data" data-bento-card data-category="computational leadership">
+      <div class="bento-card__meta">Computational + Leadership | Research Infrastructure</div>
+      <h3 class="bento-card__title">Longitudinal Health Data</h3>
+      <p class="bento-card__copy">Designed a structured platform for timestamped lifestyle data capture so future observational research can use cleaner longitudinal records.</p>
+      <div class="bento-card__chips">
+        <span>Time-series capture</span>
+        <span>Data integrity</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/longitudinal-health-data.md">Open infrastructure exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--neurovac" data-bento-card data-category="mechanical">
+      <div class="bento-card__meta">Mechanical | Device Concept</div>
+      <h3 class="bento-card__title">NeuroVac</h3>
+      <p class="bento-card__copy">Developed a non-invasive pressure modulation concept for sinking skin flap syndrome with sensing, safety constraints, and portable wear in mind.</p>
+      <div class="bento-card__chips">
+        <span>Feedback control</span>
+        <span>Clinical constraints</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/neurovac.md">Open concept exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--foot" data-bento-card data-category="mechanical">
+      <div class="bento-card__meta">Mechanical | CAD + Prosthetics</div>
+      <h3 class="bento-card__title">Assistive &amp; Prosthetics</h3>
+      <p class="bento-card__copy">Led SolidWorks CAD for post-op footwear that balanced offloading, comfort, and stability under real gait constraints.</p>
+      <div class="bento-card__chips">
+        <span>Surface modeling</span>
+        <span>Material tradeoffs</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/assistive-prosthetics.md">Open prosthetics exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--clinical" data-bento-card data-category="mechanical leadership">
+      <div class="bento-card__meta">Mechanical + Leadership | Problem Framing</div>
+      <h3 class="bento-card__title">Clinical Solutions</h3>
+      <p class="bento-card__copy">Collected multiple device concepts under one problem-driven frame focused on safety, usability, and deployment realism.</p>
+      <div class="bento-card__chips">
+        <span>Safety margins</span>
+        <span>Workflow fit</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/clinical-solutions.md">Open solution set</a></p>
+    </article>
+
+    <article class="bento-card bento-card--translation" data-bento-card data-category="leadership mechanical">
+      <div class="bento-card__meta">Leadership + Mechanical | Design Sprints</div>
+      <h3 class="bento-card__title">Rapid Clinical Design</h3>
+      <p class="bento-card__copy">Translated ambiguous healthcare problems into scoped prototypes under short sprint conditions, emphasizing patient clarity over technical sprawl.</p>
+      <div class="bento-card__chips">
+        <span>Rapid scoping</span>
+        <span>Translation</span>
+      </div>
+      <p><a class="bento-card__link" href="_projects/rapid-clinical-design.md">Open sprint exhibit</a></p>
+    </article>
   </div>
-  <div class="placard">
-    <strong>HealthHacks</strong>
-    <p><strong>Role:</strong> Organizer / Lead</p>
-    <p><strong>Scale:</strong> Multi-university collaboration (UF + USF) with hardware prototyping, judging, and overnight sprint execution.</p>
-    <p><strong>Outcome:</strong> Delivered judged prototype pitches and cross-university project execution supported by shared hardware/resources.</p>
-    <p><strong>Problem:</strong> Cross-disciplinary healthcare ideas needed focused build time, rapid prototyping resources, and execution structure.</p>
-    <p><strong>Execution:</strong> Organized participant and hardware logistics, contracts/collaborations, judging support, and hardware checkout while coordinating partner teams.</p>
-    <p><strong>Impact:</strong> Strengthened inter-institution innovation pathways and produced practical health-tech concepts under real constraints.</p>
-    <img src="../assets/img/Leadership/HHSilly.jpg" alt="HealthHacks event photo" />
-    <p><a href="https://www.linkedin.com/posts/kadin-el-bakkouri-09531b289_innovation-biomedicalengineering-grip-activity-7382535412101152768-9i7X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX-D7EBRFHp4z_-NMMPOMmJ6LZK6-ok7NQ">View LinkedIn Post</a></p>
-  </div>
-</div>
+</section>
 
 <h2 id="contact" class="section-title">Contact & Links</h2>
 <div class="placard contact-card reveal">

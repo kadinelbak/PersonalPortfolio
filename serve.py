@@ -13,46 +13,48 @@ import markdown
 from markdown.extensions.toc import TocExtension
 
 REPO_ROOT = Path(__file__).resolve().parent
-TEMPLATES = {
-    "medical": REPO_ROOT / "medical-template",
-    "engineering": REPO_ROOT / "engineering-template",
-}
+DEFAULT_TEMPLATE_ROOT = REPO_ROOT / "engineering-template"
+LEGACY_PREFIXES = ("medical", "engineering")
 
 class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
-    def _resolve_template(self):
-        parsed = urlparse(self.path)
-        path = parsed.path
+    def _resolve_file_path(self, path):
         if path == "/":
-            return "medical", "/medical/"
-        for key in ("medical", "engineering"):
-            prefix = f"/{key}/"
-            if path.startswith(prefix):
-                return key, prefix
-        return "medical", "/medical/"
-
-    def do_GET(self):
-        template_key, base_prefix = self._resolve_template()
-        template_root = TEMPLATES[template_key]
-        parsed = urlparse(self.path)
-        path = parsed.path
-
-        if path == "/":
-            self.send_response(302)
-            self.send_header("Location", "/medical/")
-            self.end_headers()
-            return
-
-        if path == base_prefix:
-            path = f"{base_prefix}index.md"
+            return DEFAULT_TEMPLATE_ROOT / "index.md"
 
         if path.startswith("/assets/"):
-            file_path = REPO_ROOT / path.lstrip("/")
-        elif path.startswith(base_prefix):
-            relative_path = path[len(base_prefix):]
-            file_path = template_root / relative_path
-        else:
-            relative_path = path.lstrip("/")
-            file_path = template_root / relative_path
+            root_asset_path = REPO_ROOT / path.lstrip("/")
+            if root_asset_path.exists():
+                return root_asset_path
+
+            template_asset_path = DEFAULT_TEMPLATE_ROOT / path.lstrip("/")
+            if template_asset_path.exists():
+                return template_asset_path
+
+            return root_asset_path
+
+        return DEFAULT_TEMPLATE_ROOT / path.lstrip("/")
+
+    def do_GET(self):
+        parsed = urlparse(self.path)
+        path = parsed.path
+        query = parsed.query
+
+        for prefix in LEGACY_PREFIXES:
+            legacy_prefix = f"/{prefix}"
+            if path == legacy_prefix or path.startswith(f"{legacy_prefix}/"):
+                stripped_path = path[len(legacy_prefix):] or "/"
+                redirect_target = stripped_path
+                if query:
+                    redirect_target = f"{redirect_target}?{query}"
+                self.send_response(302)
+                self.send_header("Location", redirect_target)
+                self.end_headers()
+                return
+
+        if path == "/":
+            path = "/index.md"
+
+        file_path = self._resolve_file_path(path)
 
         # Serve markdown as HTML
         if file_path.suffix == ".md":
@@ -71,46 +73,23 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                     md = markdown.Markdown(extensions=["extra", "codehilite", TocExtension()])
                     html_content = md.convert(content)
 
-                    other_key = "engineering" if template_key == "medical" else "medical"
-                    other_label = "Engineering" if other_key == "engineering" else "Medical"
-                    other_href = f"/{other_key}/"
-
                     nav_links = {
-                        "Gallery": f"{base_prefix}index.md#gallery",
-                        "Exhibits": f"{base_prefix}index.md#exhibits",
-                        "Research": f"{base_prefix}index.md#research",
-                        "Leadership": f"{base_prefix}index.md#leadership",
-                        "Contact": f"{base_prefix}index.md#contact",
+                        "About": "/index.md",
+                        "Projects": "/index.md#matrix",
+                        "Contact": "/index.md#contact",
                     }
 
-                    if template_key == "engineering":
-                        nav_links = {
-                            "Gallery": f"{base_prefix}index.md#gallery",
-                            "Exhibits": f"{base_prefix}index.md#exhibits",
-                            "Research": f"{base_prefix}index.md#research",
-                            "Technical": f"{base_prefix}index.md#technical",
-                            "Leadership": f"{base_prefix}index.md#leadership",
-                            "Contact": f"{base_prefix}index.md#contact",
-                        }
-
-                    css_href = f"{base_prefix}assets/css/site.css"
+                    css_href = "/assets/css/site.css"
                     nav_items_html = "\n                ".join(
                         f'<a href="{href}">{label}</a>' for label, href in nav_links.items()
                     )
-                    view_toggle_html = """
-            <div class="view-toggle" data-view-toggle>
-                <button type="button" data-view="wall">Gallery Wall</button>
-                <button type="button" data-view="immersive">Immersive</button>
-                <button type="button" data-view="grid">Grid Plan</button>
-            </div>
-                    """
-                    brand_href = f"{base_prefix}index.md"
+                    brand_href = "/index.md"
                     html = f"""<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="{base_prefix}">
+    <base href="/">
     <title>Portfolio Preview</title>
     <link rel="stylesheet" href="{css_href}">
 </head>
@@ -121,16 +100,14 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             <nav class="nav-links">
                 {nav_items_html}
             </nav>
-            {view_toggle_html}
         </div>
     </header>
     <main class="page">
-        <div class="page__eyebrow">Museum Exhibit — {template_key.title()} Portfolio</div>
+        <div class="page__eyebrow">Hybrid BME Portfolio</div>
         <article class="content-card">
             {html_content}
         </article>
     </main>
-    <a class="template-switch" href="{other_href}">Switch to {other_label}</a>
     <script>
         const currentPath = window.location.pathname;
         document.querySelectorAll('.nav-links a').forEach((link) => {{
@@ -141,21 +118,27 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
     </script>
     <script>
         (function () {{
-            const root = document.body;
-            const buttons = document.querySelectorAll('[data-view-toggle] button');
-            const storageKey = 'portfolio-view';
-            const applyView = (view) => {{
-                root.classList.remove('view-wall', 'view-immersive', 'view-grid');
-                root.classList.add(`view-${{view}}`);
-                buttons.forEach((btn) => btn.classList.toggle('active', btn.dataset.view === view));
-            }};
-            const saved = localStorage.getItem(storageKey) || 'wall';
-            applyView(saved);
-            buttons.forEach((btn) => {{
-                btn.addEventListener('click', () => {{
-                    localStorage.setItem(storageKey, btn.dataset.view);
-                    applyView(btn.dataset.view);
+            const filterGroups = document.querySelectorAll('[data-bento-filters]');
+            if (!filterGroups.length) return;
+            const cards = document.querySelectorAll('[data-bento-card]');
+            filterGroups.forEach((group) => {{
+                const buttons = group.querySelectorAll('button[data-filter]');
+                const applyFilter = (filter) => {{
+                    cards.forEach((card) => {{
+                        const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
+                        const matches = filter === 'all' || categories.includes(filter);
+                        card.hidden = !matches;
+                    }});
+                    buttons.forEach((button) => {{
+                        const active = button.dataset.filter === filter;
+                        button.classList.toggle('active', active);
+                        button.setAttribute('aria-pressed', active ? 'true' : 'false');
+                    }});
+                }};
+                buttons.forEach((button) => {{
+                    button.addEventListener('click', () => applyFilter(button.dataset.filter));
                 }});
+                applyFilter('all');
             }});
         }})();
     </script>
@@ -213,12 +196,15 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                 self.send_error(404)
         else:
             # Serve other files (images, pdfs, etc.)
-            if path.startswith("/assets/"):
+            if file_path.exists():
+                self.directory = str(file_path.parent)
+                self.path = f"/{file_path.name}"
+            elif path.startswith("/assets/"):
                 self.directory = str(REPO_ROOT)
                 self.path = path
             else:
-                self.directory = str(template_root)
-                self.path = "/" + relative_path
+                self.directory = str(DEFAULT_TEMPLATE_ROOT)
+                self.path = path
             super().do_GET()
 
 if __name__ == "__main__":
@@ -228,8 +214,8 @@ if __name__ == "__main__":
     print("Portfolio Preview Server")
     print("=" * 60)
     print("Starting server on http://localhost:5000")
-    print("Medical: http://localhost:5000/medical/")
-    print("Engineering: http://localhost:5000/engineering/")
+    print("Portfolio: http://localhost:5000/")
+    print("Legacy routes redirect to /")
     print("Press Ctrl+C to stop")
     print("=" * 60)
 

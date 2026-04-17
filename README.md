@@ -1,15 +1,14 @@
-# Portfolio Templates (Workshop)
+# Hybrid BME Portfolio
 
-This repository contains two GitHub Pages starter templates for workshop use:
+This repository contains a single GitHub Pages portfolio template for a hybrid biomedical engineering / biotech portfolio.
 
-- `medical-template/` — Medical student, research-oriented portfolio
-- `engineering-template/` — Engineering student, research + industry
+- `engineering-template/` — Unified portfolio source used for preview and publishing
 
-Workshop flow:
+Recommended flow:
 
 1. Fork or clone this repo.
-2. Inspect both templates in their folders.
-3. Keep the template you want and delete the other, or run `init-template` to copy into `docs/`.
+2. Edit the unified template in `engineering-template/`.
+3. Run `init-template` to copy the portfolio into `docs/` for GitHub Pages.
 4. Commit and enable GitHub Pages from the repository settings (publish from `gh-pages` branch or `docs/` folder on `main`).
 
 See `CHECKLIST.md` for publishing steps.

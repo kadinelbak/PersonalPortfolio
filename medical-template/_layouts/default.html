@@ -3,69 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} | Medical Portfolio</title>
+  <title>{{ page.title }} | Hybrid BME Portfolio</title>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
 </head>
-<body class="theme-medical">
+<body class="theme-portfolio">
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="{{ '/index.md' | relative_url }}">Portfolio</a>
       <nav class="nav-links">
-        <a href="{{ '/index.md#gallery' | relative_url }}">Gallery</a>
-        <a href="{{ '/index.md#exhibits' | relative_url }}">Exhibits</a>
-        <a href="{{ '/index.md#research' | relative_url }}">Research</a>
-        <a href="{{ '/index.md#leadership' | relative_url }}">Leadership</a>
+        <a href="{{ '/index.md' | relative_url }}">About</a>
+        <a href="{{ '/index.md#matrix' | relative_url }}">Projects</a>
         <a href="{{ '/index.md#contact' | relative_url }}">Contact</a>
       </nav>
-      <div class="view-toggle" data-view-toggle>
-        <button type="button" data-view="wall">Gallery Wall</button>
-        <button type="button" data-view="immersive">Immersive</button>
-        <button type="button" data-view="grid">Grid Plan</button>
-      </div>
     </div>
   </header>
 
   <main class="page">
-    <div class="page__eyebrow">Museum Exhibit - Medical Portfolio</div>
+    <div class="page__eyebrow">Hybrid BME Portfolio</div>
     <article class="content-card">
       {{ content }}
     </article>
   </main>
-
-  <a class="template-switch" href="{{ '/engineering-template/' | relative_url }}">Switch to Engineering</a>
   <script>
     (function () {
-      const root = document.body;
-      const buttons = document.querySelectorAll('[data-view-toggle] button');
-      const storageKey = 'portfolio-view';
-      const applyView = (view) => {
-        root.classList.remove('view-wall', 'view-immersive', 'view-grid');
-        root.classList.add(`view-${view}`);
-        buttons.forEach((btn) => btn.classList.toggle('active', btn.dataset.view === view));
-      };
-      const saved = localStorage.getItem(storageKey) || 'wall';
-      applyView(saved);
-      buttons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          localStorage.setItem(storageKey, btn.dataset.view);
-          applyView(btn.dataset.view);
+      const filterGroups = document.querySelectorAll('[data-bento-filters]');
+      if (!filterGroups.length) return;
+      const cards = document.querySelectorAll('[data-bento-card]');
+      filterGroups.forEach((group) => {
+        const buttons = group.querySelectorAll('button[data-filter]');
+        const applyFilter = (filter) => {
+          cards.forEach((card) => {
+            const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
+            const matches = filter === 'all' || categories.includes(filter);
+            card.hidden = !matches;
+          });
+          buttons.forEach((button) => {
+            const active = button.dataset.filter === filter;
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+        };
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => applyFilter(button.dataset.filter));
         });
+        applyFilter('all');
       });
-    })();
-  </script>
-  <script>
-    (function () {
-      const scroller = document.querySelector('[data-wall-scroll]');
-      if (!scroller) return;
-      const prev = document.querySelector('[data-wall-prev]');
-      const next = document.querySelector('[data-wall-next]');
-      const scrollByCard = (dir) => {
-        const card = scroller.querySelector('.wall-card');
-        const offset = card ? card.offsetWidth + 18 : 280;
-        scroller.scrollBy({ left: dir * offset, behavior: 'smooth' });
-      };
-      if (prev) prev.addEventListener('click', () => scrollByCard(-1));
-      if (next) next.addEventListener('click', () => scrollByCard(1));
     })();
   </script>
   <script>

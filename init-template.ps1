@@ -1,15 +1,8 @@
 # init-template.ps1
-# Usage: .\init-template.ps1 -template medical
-#        .\init-template.ps1 -template engineering
-
-param(
-    [Parameter(Mandatory=$true)]
-    [ValidateSet("medical", "engineering")]
-    [string]$template
-)
+# Usage: .\init-template.ps1
 
 $docsDir = "docs"
-$templateDir = "$template-template"
+$templateDir = "engineering-template"
 
 if (-not (Test-Path $templateDir)) {
     Write-Host "Error: $templateDir folder not found." -ForegroundColor Red
@@ -40,6 +33,6 @@ Write-Host "✓ Created $docsDir\_config.yml" -ForegroundColor Green
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Cyan
 Write-Host "  1. Update content in $docsDir\"
-Write-Host "  2. git add -A && git commit -m 'Initialize $template portfolio'"
+Write-Host "  2. git add -A && git commit -m 'Initialize portfolio'"
 Write-Host "  3. git push"
 Write-Host "  4. Enable GitHub Pages from repo Settings (branch: main, folder: docs/)"
