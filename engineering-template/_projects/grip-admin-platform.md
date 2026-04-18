@@ -34,13 +34,13 @@ GRiP coordination relied on fragmented tools and manual follow-up. The platform 
 
 ## Product Screenshots
 
-<img src="/assets/img/management%20website/dashboard.png" alt="GRiP admin dashboard" width="720" />
+<img src="../../assets/img/management%20website/dashboard.png" alt="GRiP admin dashboard" width="720" />
 
-<img src="/assets/img/management%20website/attendance.png" alt="GRiP attendance workflow and approvals" width="720" />
+<img src="../../assets/img/management%20website/attendance.png" alt="GRiP attendance workflow and approvals" width="720" />
 
-<img src="/assets/img/management%20website/teams.png" alt="GRiP team and member management" width="720" />
+<img src="../../assets/img/management%20website/teams.png" alt="GRiP team and member management" width="720" />
 
-<img src="/assets/img/management%20website/Project%20requests.png" alt="GRiP project request forms workflow" width="720" />
+<img src="../../assets/img/management%20website/Project%20requests.png" alt="GRiP project request forms workflow" width="720" />
 
 ## Leadership Continuity
 

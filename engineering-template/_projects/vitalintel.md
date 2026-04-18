@@ -34,9 +34,9 @@ The workflow in the report combines:
 
 ## VitalIntel Images
 
-![VitalIntel F1 table](/assets/img/vitalintel/vitalintel-f1-table.png)
-![VitalIntel GUI](/assets/img/vitalintel/vitalintel-gui.png)
-![VitalIntel model output](/assets/img/vitalintel/vitalintel-03.png)
+![VitalIntel F1 table](../../assets/img/vitalintel/vitalintel-f1-table.png)
+![VitalIntel GUI](../../assets/img/vitalintel/vitalintel-gui.png)
+![VitalIntel model output](../../assets/img/vitalintel/vitalintel-03.png)
 
 ## Deep Link to Source Exhibit
 

@@ -24,11 +24,11 @@ The most important outcome was real use: patients receiving their devices and ge
 
 ## Visuals
 
-<img src="/assets/img/grip/grip-technical.png" alt="GRiP technical prosthetic drawing" width="420" />
+<img src="../../assets/img/grip/grip-technical.png" alt="GRiP technical prosthetic drawing" width="420" />
 
-<img src="/assets/img/grip/grip arm.png" alt="GRiP advanced prosthetic CAD drawing" width="460" />
+<img src="../../assets/img/grip/grip arm.png" alt="GRiP advanced prosthetic CAD drawing" width="460" />
 
-<img src="/assets/img/grip/woman-redacted.jpg" alt="Recipient riding bike with face redacted" width="420" />
+<img src="../../assets/img/grip/woman-redacted.jpg" alt="Recipient riding bike with face redacted" width="420" />
 
 ## Design Review Slideshow
 

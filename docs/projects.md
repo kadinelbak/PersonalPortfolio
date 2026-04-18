@@ -22,7 +22,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>SolidWorks</span>
 				<span>Human factors</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/heart-smart/">Open design exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/heart-smart/">Open design exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--grip">
@@ -33,7 +33,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Team delivery</span>
 				<span>CAD iteration</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/grip-bike-prosthetics/">Open assistive exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/grip-bike-prosthetics/">Open assistive exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--neurovac">
@@ -44,7 +44,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Feedback control</span>
 				<span>Clinical constraints</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/neurovac/">Open concept exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/neurovac/">Open concept exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--foot">
@@ -55,7 +55,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Surface modeling</span>
 				<span>Material tradeoffs</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/assistive-prosthetics/">Open prosthetics exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/assistive-prosthetics/">Open prosthetics exhibit</a></p>
 		</article>
 	</div>
 </section>
@@ -76,7 +76,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Mechanistic interpretation</span>
 			</div>
 			<div class="bento-card__equation">$$\frac{dR}{dt}=r_R R\left(1-\frac{R+\alpha S}{K_R}\right)$$</div>
-			<p><a class="bento-card__link" href="/projects/disease-treatment-modeling/">Open research exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/disease-treatment-modeling/">Open research exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--admin">
@@ -87,7 +87,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>RBAC</span>
 				<span>Audit history</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/grip-admin-platform/">Open platform exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/grip-admin-platform/">Open platform exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--vitalintel">
@@ -98,7 +98,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Logistic regression</span>
 				<span>ECG features</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/vitalintel/">Open ML exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/vitalintel/">Open ML exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--qupath">
@@ -109,7 +109,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Automation</span>
 				<span>QC overlays</span>
 			</div>
-			<p><a class="bento-card__link" href="/projects/qupath-cell-count-pipeline/">Open pipeline exhibit</a></p>
+			<p><a class="bento-card__link" href="../projects/qupath-cell-count-pipeline/">Open pipeline exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--protease bento-card--wide">
@@ -139,7 +139,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>45 participants</span>
 				<span>15 submissions</span>
 			</div>
-			<p><a class="bento-card__link" href="/leadership/">Open event exhibit</a></p>
+			<p><a class="bento-card__link" href="../leadership/">Open event exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--hosting">
@@ -150,7 +150,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>UF + USF</span>
 				<span>Prototype weekend</span>
 			</div>
-			<p><a class="bento-card__link" href="/leadership/">Open event exhibit</a></p>
+			<p><a class="bento-card__link" href="../leadership/">Open event exhibit</a></p>
 		</article>
 
 		<article class="bento-card bento-card--admin">
@@ -161,7 +161,7 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>Continuity</span>
 				<span>Accountability</span>
 			</div>
-			<p><a class="bento-card__link" href="/leadership/">Open leadership page</a></p>
+			<p><a class="bento-card__link" href="../leadership/">Open leadership page</a></p>
 		</article>
 	</div>
 </section>

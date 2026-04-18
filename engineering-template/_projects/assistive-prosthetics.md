@@ -32,13 +32,13 @@ The project addressed discomfort and imbalance during the partial weight-bearing
 ## Visuals
 
 <img src="../assets/img/foot/foot1.png" alt="Flexi-Foot CAD view" width="320" />
-![Flexi-Foot sketch/concept](/assets/img/foot/sketchfoot.png)
+![Flexi-Foot sketch/concept](../../assets/img/foot/sketchfoot.png)
 
 Additional design artifacts:
-- [Cross section](/assets/img/foot/FootCrossSection.png)
-- [Technical drawing](/assets/img/foot/drawingfoot.png)
-- [Decision matrix](/assets/img/foot/decisionmatrixfoot.png)
-- [Designed solution](/assets/img/foot/designed%20solution.png)
+- [Cross section](../../assets/img/foot/FootCrossSection.png)
+- [Technical drawing](../../assets/img/foot/drawingfoot.png)
+- [Decision matrix](../../assets/img/foot/decisionmatrixfoot.png)
+- [Designed solution](../../assets/img/foot/designed%20solution.png)
 
 ## GRiP Bike Prosthetics (Mentorship & Delivery)
 
@@ -46,7 +46,7 @@ In GRiP, I helped lead a team of 8 students to design and deliver three bike pro
 
 ## GRiP Visuals
 
-<img src="/assets/img/grip/grip-technical.png" alt="GRiP prosthetic technical photo" width="420" />
+<img src="../../assets/img/grip/grip-technical.png" alt="GRiP prosthetic technical photo" width="420" />
 
 A second photo showing the recipient receiving or using the prosthetic on a bike is strongly recommended here because it demonstrates real-world impact alongside the technical build.
 

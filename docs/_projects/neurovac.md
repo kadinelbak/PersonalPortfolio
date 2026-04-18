@@ -30,10 +30,10 @@ NeuroVac is a pressure and depth modulating vacuum-chamber system intended to re
 
 ## Project Images
 
-![NeuroVac concept render](/assets/img/Neurovac/neurovacimage.png)
-![NeuroVac sketches](/assets/img/Neurovac/neurovac%20sketches.png)
-![One-way motor concept](/assets/img/Neurovac/one%20way%20motor.png)
-![Ball and spring valve concept](/assets/img/Neurovac/ball%20and%20spring%20for%20another%20one%20way%20air%20valve.png)
+![NeuroVac concept render](../../assets/img/Neurovac/neurovacimage.png)
+![NeuroVac sketches](../../assets/img/Neurovac/neurovac%20sketches.png)
+![One-way motor concept](../../assets/img/Neurovac/one%20way%20motor.png)
+![Ball and spring valve concept](../../assets/img/Neurovac/ball%20and%20spring%20for%20another%20one%20way%20air%20valve.png)
 
 ## Exhibit Links
 

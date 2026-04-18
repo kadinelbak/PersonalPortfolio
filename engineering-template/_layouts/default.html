@@ -4,30 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title }} | Hybrid BME Portfolio</title>
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+  <script>
+    (function () {
+      const knownRoots = new Set(['projects', 'research', 'leadership', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
+      const segments = window.location.pathname.split('/').filter(Boolean);
+      const rootPrefix = segments.length && !knownRoots.has(segments[0]) ? `/${segments[0]}` : '';
+      window.__portfolioRoot = rootPrefix;
+
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = `${rootPrefix}/assets/css/site.css`;
+      document.head.appendChild(stylesheet);
+    })();
+  </script>
 </head>
 <body class="theme-portfolio">
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="{{ '/' | relative_url }}">Portfolio</a>
+      <a class="brand" href="/" data-path="/">Portfolio</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav class="nav-links" id="site-nav">
-        <a href="{{ '/' | relative_url }}">About</a>
-        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="/" data-path="/">About</a>
+        <a href="/research/" data-path="/research/">Research</a>
         <div class="nav-dropdown">
-          <a href="{{ '/projects/' | relative_url }}" class="nav-dropdown__toggle">Projects</a>
+          <a href="/projects/" data-path="/projects/" class="nav-dropdown__toggle">Projects</a>
           <div class="nav-dropdown__menu">
-            <a href="{{ '/projects/#design' | relative_url }}">Design</a>
-            <a href="{{ '/projects/#computational' | relative_url }}">Computational</a>
-            <a href="{{ '/projects/#events' | relative_url }}">Events</a>
+            <a href="/projects/#design" data-path="/projects/#design">Design</a>
+            <a href="/projects/#computational" data-path="/projects/#computational">Computational</a>
+            <a href="/projects/#events" data-path="/projects/#events">Events</a>
           </div>
         </div>
-        <a href="{{ '/coursework/' | relative_url }}">Coursework</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact Info</a>
+        <a href="/coursework/" data-path="/coursework/">Coursework</a>
+        <a href="/contact/" data-path="/contact/">Contact Info</a>
       </nav>
     </div>
   </header>
@@ -40,6 +52,14 @@
   </main>
   <script>
     (function () {
+      const rootPrefix = window.__portfolioRoot || '';
+      document.querySelectorAll('[data-path]').forEach((link) => {
+        const targetPath = link.getAttribute('data-path');
+        if (targetPath) {
+          link.setAttribute('href', `${rootPrefix}${targetPath}`);
+        }
+      });
+
       const header = document.querySelector('.site-header');
       const navToggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('#site-nav');

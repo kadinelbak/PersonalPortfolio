@@ -36,7 +36,7 @@ Heart Smart was submitted to DTE Designathon 2024 and recognized as a winning de
 
 ## Project Image
 
-![Heart Smart CHF model](/assets/img/heartsmart/heartsmart-01.png)
+![Heart Smart CHF model](../../assets/img/heartsmart/heartsmart-01.png)
 
 ## Exhibit Links
 
