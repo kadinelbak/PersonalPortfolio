@@ -13,6 +13,8 @@ GPA: 3.76
 **LinkedIn:** [www.linkedin.com/in/kadin-el-bakkouri-09531b289](http://www.linkedin.com/in/kadin-el-bakkouri-09531b289)
 **Email:** [kelbakkouri@ufl.edu](mailto:kelbakkouri@ufl.edu)
 
+<p><a class="document-download" href="../assets/pdf/Kadin El Bakkouri CV.pdf" download>Download CV (PDF)</a></p>
+
 ---
 
 ## Education
