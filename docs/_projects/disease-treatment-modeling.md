@@ -3,6 +3,17 @@ title: Research Showcase - Dynamical Modeling of Cancer Cell Growth Dynamics
 layout: project
 ---
 
+## Research Context
+
+**PI:** Dr. Ferrall-Fairbanks  
+**Lab:** BEAT Cancer Lab  
+**Department:** Crayton J. Pruitt Department for Biomedical Engineering  
+**Graduate Assistant Mentor:** Adriana Del Pino Herrera
+
+This project is one of my core research efforts in the BEAT Cancer Lab and serves as the mathematical-modeling arm of that work.
+
+---
+
 ## Problem and Motivation
 
 Cancer populations change growth behavior under different environmental and treatment conditions. Raw time-series cell counts capture these trends, but they do not directly identify the parameters governing proliferation, crowding effects, or competition. This project builds a reproducible ODE-based fitting workflow to estimate interpretable parameters across monoculture and coculture systems.

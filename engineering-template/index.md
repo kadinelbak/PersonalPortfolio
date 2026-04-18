@@ -8,6 +8,8 @@ layout: default
   <div class="hero__subtitle">I combine device design, computational modeling, and team leadership to move health-tech ideas from first principles to deployable systems.</div>
 </div>
 
+<img class="bio-portrait" src="../assets/img/headshot.jpeg" alt="Headshot of Kadin El Bakkouri" />
+
 I believe a selfless life will leave you most fulfilled, so I live life off the principle that you reap what you sow. This starts with people. People are the center of why we do what we do. The relationships we build provide value to our lives.
 
 I have experienced this with my parents and the friendship we have built through sustained effort. I have seen it with the mentees in my organization who now invest their full effort because they feel valued. I have felt it with friends who help without hesitation and with whom I do the same. I have been thankful to build a community around myself, whether within GRiP, board game nights in my apartment, or through volunteering, and I try to spread that outward.
@@ -162,7 +164,6 @@ This portfolio is strongest when it shows that transition clearly:
 
 <h2 id="contact" class="section-title">Contact & Links</h2>
 <div class="placard contact-card reveal">
-  <img src="../assets/img/headshot.jpeg" alt="Headshot" />
   <div>
     <strong>Kadin El Bakkouri</strong>
     <p>Email: <a href="mailto:kelbakkouri@ufl.edu">kelbakkouri@ufl.edu</a><br/>

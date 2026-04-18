@@ -3,6 +3,17 @@ title: QuPath Cell Count Pipeline
 layout: project
 ---
 
+## Research Context
+
+**PI:** Dr. Ferrall-Fairbanks  
+**Lab:** BEAT Cancer Lab  
+**Department:** Crayton J. Pruitt Department for Biomedical Engineering  
+**Graduate Assistant Mentor:** Adriana Del Pino Herrera
+
+This project supports the same BEAT Cancer Lab research program by making histology analysis reproducible at batch scale.
+
+---
+
 ## Problem
 
 Manual cell counting across large histology batches was too slow and inconsistent for rapid iteration. The project goal was to automatically ingest full study folders, run consistent counting, and export analysis-ready outputs with minimal manual preprocessing.
@@ -17,7 +28,7 @@ This workflow uses QuPath scripting and batch execution to standardize image ing
 4. Export per-image and aggregate cell counts to CSV for downstream statistical analysis.
 5. Review overlays and QC snapshots before final reporting.
 
-Repository: [BeatCancerLabQuPath](https://github.com/kelbakkouri/BeatCancerLabQuPath/tree/treain)
+Repository: [BeatCancerLabQuPath](https://github.com/kadinelbak/BeatCancerLabQuPath)
 
 ## Visual Workflow
 

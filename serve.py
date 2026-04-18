@@ -36,6 +36,7 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             "/leadership": DEFAULT_TEMPLATE_ROOT / "leadership.md",
             "/projects": DEFAULT_TEMPLATE_ROOT / "projects.md",
             "/research": DEFAULT_TEMPLATE_ROOT / "research.md",
+            "/coursework": DEFAULT_TEMPLATE_ROOT / "coursework.md",
             "/engineering": DEFAULT_TEMPLATE_ROOT / "engineering.md",
             "/contact": DEFAULT_TEMPLATE_ROOT / "contact.md",
             "/cv": DEFAULT_TEMPLATE_ROOT / "cv.md",
@@ -99,16 +100,22 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                     md = markdown.Markdown(extensions=["extra", "codehilite", TocExtension()])
                     html_content = md.convert(content)
 
-                    nav_links = {
-                        "About": "/",
-                        "Projects": "/#matrix",
-                        "Contact": "/#contact",
-                    }
+                    nav_items_html = """
+                <a href="/">About</a>
+                <a href="/research/">Research</a>
+                <div class="nav-dropdown">
+                    <a href="/projects/" class="nav-dropdown__toggle">Projects</a>
+                    <div class="nav-dropdown__menu">
+                        <a href="/projects/#design">Design</a>
+                        <a href="/projects/#computational">Computational</a>
+                        <a href="/projects/#events">Events</a>
+                    </div>
+                </div>
+                <a href="/coursework/">Coursework</a>
+                <a href="/contact/">Contact Info</a>
+                    """.strip()
 
                     css_href = "/assets/css/site.css"
-                    nav_items_html = "\n                ".join(
-                        f'<a href="{href}">{label}</a>' for label, href in nav_links.items()
-                    )
                     brand_href = "/"
                     html = f"""<!DOCTYPE html>
 <html>
@@ -123,7 +130,12 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
     <header class="site-header">
         <div class="site-header__inner">
             <a href="{brand_href}" class="brand">Portfolio</a>
-            <nav class="nav-links">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="site-nav">
                 {nav_items_html}
             </nav>
         </div>
@@ -134,6 +146,52 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             {html_content}
         </article>
     </main>
+    <script>
+        (function () {{
+            const header = document.querySelector('.site-header');
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('#site-nav');
+            if (!header || !navToggle || !nav) return;
+            const mobileQuery = window.matchMedia('(max-width: 860px)');
+
+            const syncMenuState = (isOpen) => {{
+                header.dataset.menuOpen = isOpen ? 'true' : 'false';
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }};
+
+            syncMenuState(false);
+
+            navToggle.addEventListener('click', () => {{
+                const isOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+                syncMenuState(isOpen);
+            }});
+
+            nav.addEventListener('click', (event) => {{
+                if (!mobileQuery.matches) return;
+                if (event.target instanceof Element && event.target.closest('a')) {{
+                    syncMenuState(false);
+                }}
+            }});
+
+            document.addEventListener('keydown', (event) => {{
+                if (event.key === 'Escape') {{
+                    syncMenuState(false);
+                }}
+            }});
+
+            const handleViewportChange = (matchesMobile) => {{
+                if (!matchesMobile) {{
+                    syncMenuState(false);
+                }}
+            }};
+
+            if (typeof mobileQuery.addEventListener === 'function') {{
+                mobileQuery.addEventListener('change', (event) => handleViewportChange(event.matches));
+            }} else if (typeof mobileQuery.addListener === 'function') {{
+                mobileQuery.addListener((query) => handleViewportChange(query.matches));
+            }}
+        }})();
+    </script>
     <script>
         const currentPath = window.location.pathname;
         document.querySelectorAll('.nav-links a').forEach((link) => {{

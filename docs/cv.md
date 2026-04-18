@@ -98,10 +98,6 @@ Flagship research integrating measurement pipelines, density-dependent growth mo
 
 Designed assistive-device solutions in collaboration with clinical stakeholders, emphasizing safety, usability, and patient context.
 
-### Longitudinal Health Data Infrastructure (Non-Clinical)
-
-Developed a platform architecture for structured capture of nutrition, activity, and behavioral data to support future observational research. The system does not provide medical advice or clinical decision support.
-
 ---
 
 ## Technical & Analytical Skills

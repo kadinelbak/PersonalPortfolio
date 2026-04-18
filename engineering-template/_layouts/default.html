@@ -10,10 +10,24 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="{{ '/' | relative_url }}">Portfolio</a>
-      <nav class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="site-nav">
         <a href="{{ '/' | relative_url }}">About</a>
-        <a href="{{ '/#matrix' | relative_url }}">Projects</a>
-        <a href="{{ '/#contact' | relative_url }}">Contact</a>
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <div class="nav-dropdown">
+          <a href="{{ '/projects/' | relative_url }}" class="nav-dropdown__toggle">Projects</a>
+          <div class="nav-dropdown__menu">
+            <a href="{{ '/projects/#design' | relative_url }}">Design</a>
+            <a href="{{ '/projects/#computational' | relative_url }}">Computational</a>
+            <a href="{{ '/projects/#events' | relative_url }}">Events</a>
+          </div>
+        </div>
+        <a href="{{ '/coursework/' | relative_url }}">Coursework</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact Info</a>
       </nav>
     </div>
   </header>
@@ -26,6 +40,49 @@
   </main>
   <script>
     (function () {
+      const header = document.querySelector('.site-header');
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#site-nav');
+      if (!header || !navToggle || !nav) return;
+      const mobileQuery = window.matchMedia('(max-width: 860px)');
+
+      const syncMenuState = (isOpen) => {
+        header.dataset.menuOpen = isOpen ? 'true' : 'false';
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      };
+
+      syncMenuState(false);
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+        syncMenuState(isOpen);
+      });
+
+      nav.addEventListener('click', (event) => {
+        if (!mobileQuery.matches) return;
+        if (event.target instanceof Element && event.target.closest('a')) {
+          syncMenuState(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          syncMenuState(false);
+        }
+      });
+
+      const handleViewportChange = (matchesMobile) => {
+        if (!matchesMobile) {
+          syncMenuState(false);
+        }
+      };
+
+      if (typeof mobileQuery.addEventListener === 'function') {
+        mobileQuery.addEventListener('change', (event) => handleViewportChange(event.matches));
+      } else if (typeof mobileQuery.addListener === 'function') {
+        mobileQuery.addListener((query) => handleViewportChange(query.matches));
+      }
+
       const filterGroups = document.querySelectorAll('[data-bento-filters]');
       if (!filterGroups.length) return;
       const cards = document.querySelectorAll('[data-bento-card]');
