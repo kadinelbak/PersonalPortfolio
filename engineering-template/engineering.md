@@ -1,6 +1,7 @@
 ---
 title: Technical Depth
 layout: default
+permalink: /engineering/
 ---
 
 # Technical Depth

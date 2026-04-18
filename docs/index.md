@@ -8,7 +8,7 @@ layout: default
   <div class="hero__subtitle">I combine device design, computational modeling, and team leadership to move health-tech ideas from first principles to deployable systems.</div>
 </div>
 
-<img class="bio-portrait" src="../assets/img/headshot.jpeg" alt="Headshot of Kadin El Bakkouri" />
+<img class="bio-portrait" src="assets/img/headshot.jpeg" alt="Headshot of Kadin El Bakkouri" />
 
 I believe a selfless life will leave you most fulfilled, so I live life off the principle that you reap what you sow. This starts with people. People are the center of why we do what we do. The relationships we build provide value to our lives.
 
@@ -175,8 +175,8 @@ This portfolio is strongest when it shows that transition clearly:
       MakerWorld: <a href="https://makerworld.com/en/@KadinKreates/upload">KadinKreates</a>
     </p>
     <p>
-      <a href="../assets/pdf/Kadin El Bakkouri CV.pdf" download>Download CV (PDF)</a><br/>
-      <a href="../assets/pdf/Resume.pdf" download>Download Resume (PDF)</a>
+      <a href="assets/pdf/Kadin El Bakkouri CV.pdf" download>Download CV (PDF)</a><br/>
+      <a href="assets/pdf/Resume.pdf" download>Download Resume (PDF)</a>
     </p>
   </div>
 </div>
