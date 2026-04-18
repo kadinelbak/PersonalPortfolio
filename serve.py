@@ -14,15 +14,24 @@ import markdown
 from markdown.extensions.toc import TocExtension
 
 REPO_ROOT = Path(__file__).resolve().parent
-DEFAULT_TEMPLATE_ROOT = REPO_ROOT / "engineering-template"
+DEFAULT_TEMPLATE_ROOT = REPO_ROOT / "docs"
 LEGACY_PREFIXES = ("medical", "engineering")
+PAGES_SITE_PREFIX = "/PersonalPortfolio"
 
 class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
+    def _strip_site_prefix(self, path):
+        if path == PAGES_SITE_PREFIX:
+            return "/"
+        if path.startswith(f"{PAGES_SITE_PREFIX}/"):
+            stripped = path[len(PAGES_SITE_PREFIX):]
+            return stripped or "/"
+        return path
+
     def _render_liquid_relative_urls(self, content):
         # GitHub Pages resolves these Liquid tags at build time; local preview must do it explicitly.
         return re.sub(
             r"\{\{\s*['\"](?P<path>/[^'\"]*)['\"]\s*\|\s*relative_url\s*\}\}",
-            lambda match: match.group("path"),
+            lambda match: f"{PAGES_SITE_PREFIX}{match.group('path')}",
             content,
         )
 
@@ -67,11 +76,31 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
         path = parsed.path
         query = parsed.query
 
+        if path in ("", "/"):
+            redirect_target = f"{PAGES_SITE_PREFIX}/"
+            if query:
+                redirect_target = f"{redirect_target}?{query}"
+            self.send_response(302)
+            self.send_header("Location", redirect_target)
+            self.end_headers()
+            return
+
+        public_path = self._strip_site_prefix(path)
+
+        if public_path == path and not path.startswith(PAGES_SITE_PREFIX):
+            redirect_target = f"{PAGES_SITE_PREFIX}{path if path.startswith('/') else f'/{path}'}"
+            if query:
+                redirect_target = f"{redirect_target}?{query}"
+            self.send_response(302)
+            self.send_header("Location", redirect_target)
+            self.end_headers()
+            return
+
         for prefix in LEGACY_PREFIXES:
             legacy_prefix = f"/{prefix}"
-            if path == legacy_prefix or path.startswith(f"{legacy_prefix}/"):
-                stripped_path = path[len(legacy_prefix):] or "/"
-                redirect_target = stripped_path
+            if public_path == legacy_prefix or public_path.startswith(f"{legacy_prefix}/"):
+                stripped_path = public_path[len(legacy_prefix):] or "/"
+                redirect_target = f"{PAGES_SITE_PREFIX}{stripped_path}"
                 if query:
                     redirect_target = f"{redirect_target}?{query}"
                 self.send_response(302)
@@ -79,7 +108,7 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                 self.end_headers()
                 return
 
-        file_path = self._resolve_file_path(path)
+        file_path = self._resolve_file_path(public_path)
 
         # Serve markdown as HTML
         if file_path.suffix == ".md":
@@ -100,29 +129,29 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                     md = markdown.Markdown(extensions=["extra", "codehilite", TocExtension()])
                     html_content = md.convert(content)
 
-                    nav_items_html = """
-                <a href="/">About</a>
-                <a href="/research/">Research</a>
+                    nav_items_html = f"""
+                <a href="{PAGES_SITE_PREFIX}/">About</a>
+                <a href="{PAGES_SITE_PREFIX}/research/">Research</a>
                 <div class="nav-dropdown">
-                    <a href="/projects/" class="nav-dropdown__toggle">Projects</a>
+                    <a href="{PAGES_SITE_PREFIX}/projects/" class="nav-dropdown__toggle">Projects</a>
                     <div class="nav-dropdown__menu">
-                        <a href="/projects/#design">Design</a>
-                        <a href="/projects/#computational">Computational</a>
-                        <a href="/projects/#events">Events</a>
+                        <a href="{PAGES_SITE_PREFIX}/projects/#design">Design</a>
+                        <a href="{PAGES_SITE_PREFIX}/projects/#computational">Computational</a>
+                        <a href="{PAGES_SITE_PREFIX}/projects/#events">Events</a>
                     </div>
                 </div>
-                <a href="/coursework/">Coursework</a>
-                <a href="/contact/">Contact Info</a>
+                <a href="{PAGES_SITE_PREFIX}/coursework/">Coursework</a>
+                <a href="{PAGES_SITE_PREFIX}/contact/">Contact Info</a>
                     """.strip()
 
-                    css_href = "/assets/css/site.css"
-                    brand_href = "/"
+                    css_href = f"{PAGES_SITE_PREFIX}/assets/css/site.css"
+                    brand_href = f"{PAGES_SITE_PREFIX}/"
                     html = f"""<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
+    <base href="{PAGES_SITE_PREFIX}/">
     <title>Portfolio Preview</title>
     <link rel="stylesheet" href="{css_href}">
 </head>
@@ -268,12 +297,12 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             if file_path.exists():
                 self.directory = str(file_path.parent)
                 self.path = f"/{file_path.name}"
-            elif path.startswith("/assets/"):
+            elif public_path.startswith("/assets/"):
                 self.directory = str(REPO_ROOT)
-                self.path = path
+                self.path = public_path
             else:
                 self.directory = str(DEFAULT_TEMPLATE_ROOT)
-                self.path = path
+                self.path = public_path
             super().do_GET()
 
 if __name__ == "__main__":
@@ -283,8 +312,8 @@ if __name__ == "__main__":
     print("Portfolio Preview Server")
     print("=" * 60)
     print("Starting server on http://localhost:5000")
-    print("Portfolio: http://localhost:5000/")
-    print("Legacy routes redirect to /")
+    print(f"Portfolio: http://localhost:5000{PAGES_SITE_PREFIX}/")
+    print(f"Root redirects to {PAGES_SITE_PREFIX}/")
     print("Press Ctrl+C to stop")
     print("=" * 60)
 
