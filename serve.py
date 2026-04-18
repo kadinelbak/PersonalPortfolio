@@ -5,6 +5,7 @@ This converts markdown to HTML on-the-fly for preview purposes.
 """
 
 import os
+import re
 import sys
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
@@ -17,9 +18,35 @@ DEFAULT_TEMPLATE_ROOT = REPO_ROOT / "engineering-template"
 LEGACY_PREFIXES = ("medical", "engineering")
 
 class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
+    def _render_liquid_relative_urls(self, content):
+        # GitHub Pages resolves these Liquid tags at build time; local preview must do it explicitly.
+        return re.sub(
+            r"\{\{\s*['\"](?P<path>/[^'\"]*)['\"]\s*\|\s*relative_url\s*\}\}",
+            lambda match: match.group("path"),
+            content,
+        )
+
     def _resolve_file_path(self, path):
-        if path == "/":
+        normalized_path = path if path in ("/", "/index.html") else path.rstrip("/")
+
+        if normalized_path in ("", "/", "/index.html"):
             return DEFAULT_TEMPLATE_ROOT / "index.md"
+
+        pretty_pages = {
+            "/leadership": DEFAULT_TEMPLATE_ROOT / "leadership.md",
+            "/projects": DEFAULT_TEMPLATE_ROOT / "projects.md",
+            "/research": DEFAULT_TEMPLATE_ROOT / "research.md",
+            "/engineering": DEFAULT_TEMPLATE_ROOT / "engineering.md",
+            "/contact": DEFAULT_TEMPLATE_ROOT / "contact.md",
+            "/cv": DEFAULT_TEMPLATE_ROOT / "cv.md",
+        }
+
+        if normalized_path in pretty_pages:
+            return pretty_pages[normalized_path]
+
+        if normalized_path.startswith("/projects/"):
+            project_name = normalized_path.removeprefix("/projects/").strip("/")
+            return DEFAULT_TEMPLATE_ROOT / "_projects" / f"{project_name}.md"
 
         if path.startswith("/assets/"):
             root_asset_path = REPO_ROOT / path.lstrip("/")
@@ -51,9 +78,6 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                 self.end_headers()
                 return
 
-        if path == "/":
-            path = "/index.md"
-
         file_path = self._resolve_file_path(path)
 
         # Serve markdown as HTML
@@ -69,21 +93,23 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                         if len(parts) >= 3:
                             content = parts[2].strip()
 
+                    content = self._render_liquid_relative_urls(content)
+
                     # Convert markdown to HTML
                     md = markdown.Markdown(extensions=["extra", "codehilite", TocExtension()])
                     html_content = md.convert(content)
 
                     nav_links = {
-                        "About": "/index.md",
-                        "Projects": "/index.md#matrix",
-                        "Contact": "/index.md#contact",
+                        "About": "/",
+                        "Projects": "/#matrix",
+                        "Contact": "/#contact",
                     }
 
                     css_href = "/assets/css/site.css"
                     nav_items_html = "\n                ".join(
                         f'<a href="{href}">{label}</a>' for label, href in nav_links.items()
                     )
-                    brand_href = "/index.md"
+                    brand_href = "/"
                     html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -153,21 +179,6 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                 }});
             }}, {{ threshold: 0.15 }});
             reveals.forEach((el) => observer.observe(el));
-
-            const mapLinks = document.querySelectorAll('.gallery-map a');
-            const sections = Array.from(mapLinks)
-                .map((link) => document.querySelector(link.getAttribute('href')))
-                .filter(Boolean);
-            const mapObserver = new IntersectionObserver((entries) => {{
-                entries.forEach((entry) => {{
-                    if (entry.isIntersecting) {{
-                        mapLinks.forEach((link) => link.classList.remove('active'));
-                        const active = document.querySelector(`.gallery-map a[href="#${{entry.target.id}}"]`);
-                        if (active) active.classList.add('active');
-                    }}
-                }});
-            }}, {{ threshold: 0.35 }});
-            sections.forEach((section) => mapObserver.observe(section));
         }})();
     </script>
     <script>

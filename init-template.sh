@@ -15,24 +15,11 @@ if [ -d "$DOCS_DIR" ]; then
     rm -rf "$DOCS_DIR"
 fi
 
-# Copy template into docs
-cp -r "$TEMPLATE_DIR" "$DOCS_DIR"
-
-# Create a minimal _config.yml
-cat > "$DOCS_DIR/_config.yml" << 'EOF'
-# GitHub Pages Configuration
-theme: jekyll-theme-minimal
-title: Portfolio
-description: My portfolio website
-
-# Optional: add nav if Jekyll supports it
-# navigation:
-#   - title: Home
-#     url: /index.html
-EOF
+# Copy template contents into docs, including Jekyll config
+mkdir -p "$DOCS_DIR"
+cp -r "$TEMPLATE_DIR"/. "$DOCS_DIR"
 
 echo "✓ Copied $TEMPLATE_DIR to $DOCS_DIR/"
-echo "✓ Created $DOCS_DIR/_config.yml"
 echo ""
 echo "Next steps:"
 echo "  1. Update content in $DOCS_DIR/"
