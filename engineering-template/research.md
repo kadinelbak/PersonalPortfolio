@@ -12,8 +12,10 @@ This section highlights completed research work and reproducible analysis pipeli
 	<div class="research-preview__body">
 		<h2>Disease &amp; Treatment Modeling</h2>
 		<p><strong>PI:</strong> Dr. Ferrall-Fairbanks<br/>
+		<strong>Institution:</strong> University of Florida<br/>
 		<strong>Lab:</strong> BEAT Cancer Lab<br/>
 		<strong>Department:</strong> Crayton J. Pruitt Department for Biomedical Engineering<br/>
+		<strong>Affiliation:</strong> 2024-Present<br/>
 		<strong>Graduate Assistant Mentor:</strong> Adriana Del Pino Herrera</p>
 		<p>This project focuses on mathematical modeling of ovarian cancer population dynamics, with an emphasis on interpretable growth behavior, treatment response, and adaptive-therapy framing. The work turns experimental cell-growth measurements into parameterized ODE models that can be compared across monoculture and coculture conditions.</p>
 		<p>My responsibilities centered on building the fitting workflow, organizing the model-comparison pipeline, and interpreting how the fitted parameters changed across experimental settings. That included preparing visual outputs, comparing model forms with information criteria, and structuring the analysis so it could support future treated coculture work.</p>
@@ -26,8 +28,10 @@ This section highlights completed research work and reproducible analysis pipeli
 	<div class="research-preview__body">
 		<h2>QuPath Cell Count Pipeline</h2>
 		<p><strong>PI:</strong> Dr. Ferrall-Fairbanks<br/>
+		<strong>Institution:</strong> University of Florida<br/>
 		<strong>Lab:</strong> BEAT Cancer Lab<br/>
 		<strong>Department:</strong> Crayton J. Pruitt Department for Biomedical Engineering<br/>
+		<strong>Affiliation:</strong> 2024-Present<br/>
 		<strong>Graduate Assistant Mentor:</strong> Adriana Del Pino Herrera</p>
 		<p>This project focuses on research-enabling histology analysis infrastructure. The pipeline standardizes large-batch image ingestion, cell detection, and export so experimental datasets can move into downstream analysis without the speed and consistency limits of manual counting.</p>
 		<p>My responsibilities included building and refining the QuPath workflow, setting up consistent naming and export behavior, and structuring the process so quality-control review stayed possible even at larger batch sizes. The result was a more reproducible path from image folders to analysis-ready quantitative outputs.</p>

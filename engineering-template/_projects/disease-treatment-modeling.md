@@ -6,8 +6,10 @@ layout: project
 ## Research Context
 
 **PI:** Dr. Ferrall-Fairbanks  
+**Institution:** University of Florida  
 **Lab:** BEAT Cancer Lab  
 **Department:** Crayton J. Pruitt Department for Biomedical Engineering  
+**Affiliation:** 2024-Present  
 **Graduate Assistant Mentor:** Adriana Del Pino Herrera
 
 This project is one of my core research efforts in the BEAT Cancer Lab and serves as the mathematical-modeling arm of that work.

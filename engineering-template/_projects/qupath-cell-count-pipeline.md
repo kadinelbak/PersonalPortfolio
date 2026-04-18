@@ -6,8 +6,10 @@ layout: project
 ## Research Context
 
 **PI:** Dr. Ferrall-Fairbanks  
+**Institution:** University of Florida  
 **Lab:** BEAT Cancer Lab  
 **Department:** Crayton J. Pruitt Department for Biomedical Engineering  
+**Affiliation:** 2024-Present  
 **Graduate Assistant Mentor:** Adriana Del Pino Herrera
 
 This project supports the same BEAT Cancer Lab research program by making histology analysis reproducible at batch scale.

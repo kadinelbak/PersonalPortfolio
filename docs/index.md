@@ -175,7 +175,7 @@ This portfolio is strongest when it shows that transition clearly:
       MakerWorld: <a href="https://makerworld.com/en/@KadinKreates/upload">KadinKreates</a>
     </p>
     <p>
-      <a href="../assets/pdf/CV.pdf" download>Download CV (PDF)</a><br/>
+      <a href="../assets/pdf/Kadin El Bakkouri CV.pdf" download>Download CV (PDF)</a><br/>
       <a href="../assets/pdf/Resume.pdf" download>Download Resume (PDF)</a>
     </p>
   </div>
