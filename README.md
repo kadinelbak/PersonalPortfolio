@@ -1,14 +1,47 @@
-# Hybrid BME Portfolio
+# Kadin El Bakkouri Portfolio
 
-This repository contains a single GitHub Pages portfolio template for a hybrid biomedical engineering / biotech portfolio.
+This repository contains the source for Kadin El Bakkouri's biomedical engineering portfolio, published with GitHub Pages from the `docs/` folder.
 
-- `engineering-template/` — Unified portfolio source used for preview and publishing
+The portfolio focuses on:
 
-Recommended flow:
+- biomedical device design
+- computational modeling and clinical data workflows
+- research infrastructure
+- leadership and assistive technology project delivery
 
-1. Fork or clone this repo.
-2. Edit the unified template in `engineering-template/`.
-3. Run `init-template` to copy the portfolio into `docs/` for GitHub Pages.
-4. Commit and enable GitHub Pages from the repository settings (publish from `gh-pages` branch or `docs/` folder on `main`).
+## Source of Truth
 
-See `CHECKLIST.md` for publishing steps.
+Edit the live site in `docs/`.
+
+Key files:
+
+- `docs/index.md` - homepage and project matrix
+- `docs/projects.md` - grouped project overview
+- `docs/research.md` - research highlights
+- `docs/_projects/` - detailed project pages
+- `docs/assets/css/site.css` - site styling
+- `docs/assets/img/` - images used by the published site
+- `docs/assets/pdf/` - downloadable CV and resume files
+
+## Local Preview
+
+The included preview server renders the Markdown site locally:
+
+```powershell
+python serve.py
+```
+
+Then open:
+
+```text
+http://localhost:5000/PersonalPortfolio/
+```
+
+## Publishing
+
+In GitHub Pages settings, publish from:
+
+- branch: `main`
+- folder: `/docs`
+
+After changes, click through the site and confirm images, project pages, CV, and resume downloads load correctly.

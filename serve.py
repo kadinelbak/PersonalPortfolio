@@ -43,6 +43,7 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
 
         pretty_pages = {
             "/leadership": DEFAULT_TEMPLATE_ROOT / "leadership.md",
+            "/fabrication": DEFAULT_TEMPLATE_ROOT / "fabrication.md",
             "/projects": DEFAULT_TEMPLATE_ROOT / "projects.md",
             "/research": DEFAULT_TEMPLATE_ROOT / "research.md",
             "/coursework": DEFAULT_TEMPLATE_ROOT / "coursework.md",
@@ -59,13 +60,13 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             return DEFAULT_TEMPLATE_ROOT / "_projects" / f"{project_name}.md"
 
         if path.startswith("/assets/"):
-            root_asset_path = REPO_ROOT / path.lstrip("/")
-            if root_asset_path.exists():
-                return root_asset_path
-
             template_asset_path = DEFAULT_TEMPLATE_ROOT / path.lstrip("/")
             if template_asset_path.exists():
                 return template_asset_path
+
+            root_asset_path = REPO_ROOT / path.lstrip("/")
+            if root_asset_path.exists():
+                return root_asset_path
 
             return root_asset_path
 
@@ -140,8 +141,9 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                         <a href="{PAGES_SITE_PREFIX}/projects/#events">Events</a>
                     </div>
                 </div>
+                <a href="{PAGES_SITE_PREFIX}/fabrication/">Fabrication</a>
                 <a href="{PAGES_SITE_PREFIX}/coursework/">Coursework</a>
-                <a href="{PAGES_SITE_PREFIX}/contact/">Contact Info</a>
+                <a href="{PAGES_SITE_PREFIX}/contact/">Contact</a>
                     """.strip()
 
                     css_href = f"{PAGES_SITE_PREFIX}/assets/css/site.css"
@@ -152,13 +154,13 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="{PAGES_SITE_PREFIX}/">
-    <title>Portfolio Preview</title>
+    <title>Kadin El Bakkouri Portfolio Preview</title>
     <link rel="stylesheet" href="{css_href}">
 </head>
 <body>
     <header class="site-header">
         <div class="site-header__inner">
-            <a href="{brand_href}" class="brand">Portfolio</a>
+            <a href="{brand_href}" class="brand">Kadin El Bakkouri</a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -170,7 +172,7 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
         </div>
     </header>
     <main class="page">
-        <div class="page__eyebrow">Hybrid BME Portfolio</div>
+        <div class="page__eyebrow">Biomedical Engineering Portfolio</div>
         <article class="content-card">
             {html_content}
         </article>
@@ -238,7 +240,7 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
                 const buttons = group.querySelectorAll('button[data-filter]');
                 const applyFilter = (filter) => {{
                     cards.forEach((card) => {{
-                        const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
+                        const categories = (card.dataset.category || '').split(/\\s+/).filter(Boolean);
                         const matches = filter === 'all' || categories.includes(filter);
                         card.hidden = !matches;
                     }});
@@ -309,7 +311,7 @@ if __name__ == "__main__":
     os.chdir(REPO_ROOT)
 
     print("=" * 60)
-    print("Portfolio Preview Server")
+    print("Kadin El Bakkouri Portfolio Preview Server")
     print("=" * 60)
     print("Starting server on http://localhost:5000")
     print(f"Portfolio: http://localhost:5000{PAGES_SITE_PREFIX}/")

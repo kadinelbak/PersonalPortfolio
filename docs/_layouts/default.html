@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} | Hybrid BME Portfolio</title>
+  <title>{{ page.title }} | Kadin El Bakkouri</title>
   <script>
     (function () {
-      const knownRoots = new Set(['projects', 'research', 'leadership', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
+      const knownRoots = new Set(['projects', 'research', 'leadership', 'fabrication', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
       const segments = window.location.pathname.split('/').filter(Boolean);
       const rootPrefix = segments.length && !knownRoots.has(segments[0]) ? `/${segments[0]}` : '';
       window.__portfolioRoot = rootPrefix;
@@ -21,7 +21,7 @@
 <body class="theme-portfolio">
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="/" data-path="/">Portfolio</a>
+      <a class="brand" href="/" data-path="/">Kadin El Bakkouri</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -38,14 +38,15 @@
             <a href="/projects/#events" data-path="/projects/#events">Events</a>
           </div>
         </div>
+        <a href="/fabrication/" data-path="/fabrication/">Fabrication</a>
         <a href="/coursework/" data-path="/coursework/">Coursework</a>
-        <a href="/contact/" data-path="/contact/">Contact Info</a>
+        <a href="/contact/" data-path="/contact/">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="page">
-    <div class="page__eyebrow">Hybrid BME Portfolio</div>
+    <div class="page__eyebrow">Biomedical Engineering Portfolio</div>
     <article class="content-card">
       {{ content }}
     </article>

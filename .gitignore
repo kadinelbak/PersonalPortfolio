@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+# Local preview/build artifacts
+.jekyll-cache/
+_site/
+.sass-cache/
+
+# One-off extraction scratch space
+extracted-doc-images/
+
+# Local noise
+Test.txt
+*.tmp
+*.log

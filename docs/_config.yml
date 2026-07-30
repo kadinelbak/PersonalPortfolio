@@ -1,7 +1,7 @@
 # GitHub Pages Configuration
 theme: jekyll-theme-minimal
-title: Portfolio
-description: My portfolio website
+title: Kadin El Bakkouri
+description: Biomedical engineering portfolio spanning device design, computational modeling, research infrastructure, and leadership.
 
 collections:
   projects:

@@ -4,17 +4,17 @@ layout: default
 ---
 
 <div class="hero">
-  <div class="hero__title">Hybrid Biomedical Engineering Portfolio</div>
-  <div class="hero__subtitle">I combine device design, computational modeling, and team leadership to move health-tech ideas from first principles to deployable systems.</div>
+  <div class="hero__title">Kadin El Bakkouri</div>
+  <div class="hero__subtitle">Biomedical engineering portfolio spanning device design, computational modeling, research infrastructure, and team leadership.</div>
 </div>
 
 <img class="bio-portrait" src="assets/img/headshot.jpeg" alt="Headshot of Kadin El Bakkouri" />
 
-I believe a selfless life will leave you most fulfilled, so I live life off the principle that you reap what you sow. This starts with people. People are the center of why we do what we do. The relationships we build provide value to our lives.
+I combine device design, computational modeling, and team leadership to move health-tech ideas from first principles to usable systems. My work sits between biological mechanism, engineering constraints, and the human relationships that determine whether a solution can actually be adopted.
 
-I have experienced this with my parents and the friendship we have built through sustained effort. I have seen it with the mentees in my organization who now invest their full effort because they feel valued. I have felt it with friends who help without hesitation and with whom I do the same. I have been thankful to build a community around myself, whether within GRiP, board game nights in my apartment, or through volunteering, and I try to spread that outward.
+That shows up in three connected ways: **technical and engineering systems thinking**, **biological and mechanistic insight**, and **genuine personal relationship**. I care about solving problems at their root cause, but I also care about whether the result is understandable, maintainable, and useful to the people around it.
 
-To sustain those relationships and provide meaningful help, I have learned to combine three things: **technical and engineering systems thinking**, **biological and mechanistic insights**, and **genuine personal relationship**. This approach allows me to solve problems at their root cause rather than at their surface.
+I have seen that through research workflows in the BEAT Cancer Lab, assistive technology projects in GRiP, device design sprints, and mentorship of student teams. The common thread is turning complicated systems into work that others can trust, use, and build on.
 
 ---
 
@@ -114,6 +114,30 @@ This portfolio is strongest when it shows that transition clearly:
       <p><a class="bento-card__link" href="https://kadinelbak.github.io/HIV-Proteases-Detector/" target="_blank" rel="noreferrer">Open drug discovery exhibit</a></p>
     </article>
 
+    <article class="bento-card bento-card--homelab bento-card--wide" data-bento-card data-category="computational">
+      <div class="bento-card__meta">Infrastructure | Live Server</div>
+      <h3 class="bento-card__title">Homelab Infrastructure</h3>
+      <p class="bento-card__copy">Built a live phased Docker Compose server stack with identity, monitoring, backups, media, AI, gaming, and on-demand service controls.</p>
+      <div class="bento-card__chips">
+        <span>Docker Compose</span>
+        <span>Tailscale</span>
+        <span>Observability</span>
+      </div>
+      <p><a class="bento-card__link" href="projects/homelab-infrastructure/">Open infrastructure exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--forge" data-bento-card data-category="computational leadership">
+      <div class="bento-card__meta">Mobile Product | Health + Nutrition</div>
+      <h3 class="bento-card__title">ForgeLabs Fitness</h3>
+      <p class="bento-card__copy">Shipped an iOS and Android health app that connects biometric context, meal planning, grocery execution, and workout tracking.</p>
+      <div class="bento-card__chips">
+        <span>App Store</span>
+        <span>Google Play</span>
+        <span>100 users</span>
+      </div>
+      <p><a class="bento-card__link" href="projects/forge-labs-fitness/">Open app exhibit</a></p>
+    </article>
+
     <article class="bento-card bento-card--qupath" data-bento-card data-category="computational">
       <div class="bento-card__meta">Computational | Analysis Pipeline</div>
       <h3 class="bento-card__title">QuPath Cell Count Pipeline</h3>
@@ -145,6 +169,29 @@ This portfolio is strongest when it shows that transition clearly:
         <span>Material tradeoffs</span>
       </div>
       <p><a class="bento-card__link" href="projects/assistive-prosthetics/">Open prosthetics exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--retractor bento-card--wide" data-bento-card data-category="mechanical">
+      <div class="bento-card__meta">Mechanical | Surgical Device Concept</div>
+      <h3 class="bento-card__title">Retractor Arm</h3>
+      <p class="bento-card__copy">Designed a low-profile support arm concept using mechanical engagement to resist slip while preserving access around the operative field.</p>
+      <div class="bento-card__chips">
+        <span>CAD</span>
+        <span>Load transfer</span>
+        <span>Clinical constraints</span>
+      </div>
+      <p><a class="bento-card__link" href="projects/retractor-arm/">Open design exhibit</a></p>
+    </article>
+
+    <article class="bento-card bento-card--makerworld" data-bento-card data-category="mechanical">
+      <div class="bento-card__meta">Fabrication | MakerWorld</div>
+      <h3 class="bento-card__title">3D Printing Gallery</h3>
+      <p class="bento-card__copy">A growing gallery of printed organizers, brackets, bookmarks, and small functional prototypes that show the CAD-to-print loop.</p>
+      <div class="bento-card__chips">
+        <span>Printability</span>
+        <span>Iteration</span>
+      </div>
+      <p><a class="bento-card__link" href="fabrication/">Open gallery</a></p>
     </article>
 
     <article class="bento-card bento-card--hosting bento-card--wide" data-bento-card data-category="leadership mechanical">

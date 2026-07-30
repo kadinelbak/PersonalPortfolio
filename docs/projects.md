@@ -57,6 +57,28 @@ This page groups the portfolio into the three buckets that best reflect how the 
 			</div>
 			<p><a class="bento-card__link" href="../projects/assistive-prosthetics/">Open prosthetics exhibit</a></p>
 		</article>
+
+		<article class="bento-card bento-card--retractor bento-card--wide">
+			<div class="bento-card__meta">Design | Surgical Device Concept</div>
+			<h3 class="bento-card__title">Retractor Arm</h3>
+			<p class="bento-card__copy">A low-profile retractor support arm concept centered on mechanical engagement, load transfer, and surgical workspace constraints.</p>
+			<div class="bento-card__chips">
+				<span>CAD</span>
+				<span>Mechanical lock</span>
+			</div>
+			<p><a class="bento-card__link" href="../projects/retractor-arm/">Open retractor exhibit</a></p>
+		</article>
+
+		<article class="bento-card bento-card--makerworld">
+			<div class="bento-card__meta">Design | Fabrication</div>
+			<h3 class="bento-card__title">MakerWorld Gallery</h3>
+			<p class="bento-card__copy">Practical 3D-printing work spanning organizers, brackets, bookmarks, and small functional prototypes.</p>
+			<div class="bento-card__chips">
+				<span>3D printing</span>
+				<span>Iteration</span>
+			</div>
+			<p><a class="bento-card__link" href="../fabrication/">Open fabrication gallery</a></p>
+		</article>
 	</div>
 </section>
 
@@ -121,6 +143,29 @@ This page groups the portfolio into the three buckets that best reflect how the 
 				<span>PyTorch</span>
 			</div>
 			<p><a class="bento-card__link" href="https://kadinelbak.github.io/HIV-Proteases-Detector/" target="_blank" rel="noreferrer">Open drug discovery exhibit</a></p>
+		</article>
+
+		<article class="bento-card bento-card--homelab bento-card--wide">
+			<div class="bento-card__meta">Computational | Live Infrastructure</div>
+			<h3 class="bento-card__title">Homelab Infrastructure</h3>
+			<p class="bento-card__copy">A phased self-hosted server stack with Docker Compose, identity, monitoring, backups, AI tools, games, and on-demand services.</p>
+			<div class="bento-card__chips">
+				<span>Docker Compose</span>
+				<span>Monitoring</span>
+				<span>Tailscale</span>
+			</div>
+			<p><a class="bento-card__link" href="../projects/homelab-infrastructure/">Open infrastructure exhibit</a></p>
+		</article>
+
+		<article class="bento-card bento-card--forge">
+			<div class="bento-card__meta">Computational | Mobile Product</div>
+			<h3 class="bento-card__title">ForgeLabs Fitness</h3>
+			<p class="bento-card__copy">An App Store and Google Play health app connecting biometric context, nutrition planning, grocery execution, and fitness tracking.</p>
+			<div class="bento-card__chips">
+				<span>iOS + Android</span>
+				<span>100 users</span>
+			</div>
+			<p><a class="bento-card__link" href="../projects/forge-labs-fitness/">Open product exhibit</a></p>
 		</article>
 	</div>
 </section>

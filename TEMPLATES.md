@@ -1,41 +1,13 @@
-# Template Comparison
+# Portfolio Direction
 
-## Medical Student Template
+This is no longer a starter template repository. The maintained portfolio lives in `docs/` and is structured around one narrative:
 
-**Identity statement:**
-> I use quantitative and design tools to better understand biological systems and translate insights into real-world health and care contexts.
+> I combine biomedical device design, computational modeling, and team leadership to move health-tech ideas from first principles to usable systems.
 
-**Key rules:**
-- 4–5 curated projects MAX (disease modeling, device, assistive tech, ML)
-- Link GitHub once per project under "Technical appendix"
-- NO badges, language stats, or repo lists
-- Emphasize clinical problem and insight
-- Leadership & Service as separate section
-- Hide implementation details
+## Curation Rules
 
-## Engineering Student Template
-
-**Identity statement:**
-> I design and build systems that move from problem definition to real-world deployment under technical and human constraints.
-
-**Key rules:**
-- 3–6 projects allowed
-- Architecture diagrams encouraged
-- Benchmarks and metrics visible
-- GitHub repos linked prominently
-- Technical depth on dedicated `engineering.md` page
-- Research section for publications
-
-## Shared Principles (Both)
-
-- Portfolio is a **narrative**, not a dump
-- Fewer projects + stronger framing > volume
-- Website explains *why*; GitHub proves *how*
-- Should be **interview-ready**
-
-## Decision Heuristic
-
-If a reviewer can say:
-> "I understand what this person cares about and why it matters"
-
-You did it right.
+- Keep the project list selective and evidence-driven.
+- Let the website explain context, judgment, and impact.
+- Let linked repositories, reports, and demos prove implementation depth.
+- Prefer concrete outcomes, constraints, metrics, and personal contributions over broad claims.
+- Update `docs/` first; treat older template folders only as historical reference.

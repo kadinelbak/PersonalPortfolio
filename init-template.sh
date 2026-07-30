@@ -1,28 +1,12 @@
 #!/bin/bash
 
-# init-template.sh
-# Usage: bash init-template.sh
-DOCS_DIR="docs"
-TEMPLATE_DIR="engineering-template"
+# Historical helper retained for reference. The live portfolio now lives in docs/.
 
-if [ ! -d "$TEMPLATE_DIR" ]; then
-    echo "Error: $TEMPLATE_DIR/ folder not found."
-    exit 1
-fi
-
-# Remove old docs folder if it exists
-if [ -d "$DOCS_DIR" ]; then
-    rm -rf "$DOCS_DIR"
-fi
-
-# Copy template contents into docs, including Jekyll config
-mkdir -p "$DOCS_DIR"
-cp -r "$TEMPLATE_DIR"/. "$DOCS_DIR"
-
-echo "✓ Copied $TEMPLATE_DIR to $DOCS_DIR/"
+echo "This portfolio is already initialized."
+echo "Edit the live GitHub Pages source in docs/."
 echo ""
-echo "Next steps:"
-echo "  1. Update content in $DOCS_DIR/"
-echo "  2. git add -A && git commit -m 'Initialize portfolio'"
-echo "  3. git push"
-echo "  4. Enable GitHub Pages from repo Settings (branch: main, folder: docs/)"
+echo "To preview locally:"
+echo "  python serve.py"
+echo "  http://localhost:5000/PersonalPortfolio/"
+echo ""
+echo "This script no longer deletes or overwrites docs/."

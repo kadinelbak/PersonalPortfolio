@@ -1,28 +1,11 @@
 # init-template.ps1
-# Usage: .\init-template.ps1
+# Historical helper retained for reference. The live portfolio now lives in docs/.
 
-$docsDir = "docs"
-$templateDir = "engineering-template"
-
-if (-not (Test-Path $templateDir)) {
-    Write-Host "Error: $templateDir folder not found." -ForegroundColor Red
-    exit 1
-}
-
-# Remove old docs if exists
-if (Test-Path $docsDir) {
-    Remove-Item -Recurse -Force $docsDir
-    Write-Host "Removed old $docsDir folder."
-}
-
-# Copy template contents, including Jekyll config
-New-Item -ItemType Directory -Path $docsDir | Out-Null
-Copy-Item -Recurse "$templateDir\*" $docsDir
-Write-Host "Copied $templateDir to $docsDir" -ForegroundColor Green
-
+Write-Host "This portfolio is already initialized." -ForegroundColor Yellow
+Write-Host "Edit the live GitHub Pages source in docs/."
 Write-Host ""
-Write-Host "Next steps:" -ForegroundColor Cyan
-Write-Host "  1. Update content in ${docsDir}/"
-Write-Host '  2. git add -A; git commit -m "Initialize portfolio"'
-Write-Host "  3. git push"
-Write-Host "  4. Enable GitHub Pages from repo Settings (branch: main, folder: docs/)"
+Write-Host "To preview locally:"
+Write-Host "  python serve.py"
+Write-Host "  http://localhost:5000/PersonalPortfolio/"
+Write-Host ""
+Write-Host "This script no longer deletes or overwrites docs/."
