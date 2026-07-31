@@ -61,10 +61,11 @@ This page groups the portfolio into the three buckets that best reflect how the 
 		<article class="bento-card bento-card--retractor bento-card--wide">
 			<div class="bento-card__meta">Design | Surgical Device Concept</div>
 			<h3 class="bento-card__title">Retractor Arm</h3>
-			<p class="bento-card__copy">A low-profile retractor support arm concept centered on mechanical engagement, load transfer, and surgical workspace constraints.</p>
+			<p class="bento-card__copy">A TAAA retractor system concept using layer-jamming blades, FEA-guided lower support geometry, and mechanical locking joints.</p>
 			<div class="bento-card__chips">
-				<span>CAD</span>
-				<span>Mechanical lock</span>
+				<span>FEA</span>
+				<span>Layer jamming</span>
+				<span>Mechanical locks</span>
 			</div>
 			<p><a class="bento-card__link" href="../projects/retractor-arm/">Open retractor exhibit</a></p>
 		</article>

@@ -174,10 +174,11 @@ This portfolio is strongest when it shows that transition clearly:
     <article class="bento-card bento-card--retractor bento-card--wide" data-bento-card data-category="mechanical">
       <div class="bento-card__meta">Mechanical | Surgical Device Concept</div>
       <h3 class="bento-card__title">Retractor Arm</h3>
-      <p class="bento-card__copy">Designed a low-profile support arm concept using mechanical engagement to resist slip while preserving access around the operative field.</p>
+      <p class="bento-card__copy">Developed a TAAA retractor system concept across three tracks: layer-jamming blades, FEA-guided low-profile arms, and mechanical locks.</p>
       <div class="bento-card__chips">
-        <span>CAD</span>
-        <span>Load transfer</span>
+        <span>FEA</span>
+        <span>Layer jamming</span>
+        <span>Mechanical locks</span>
         <span>Clinical constraints</span>
       </div>
       <p><a class="bento-card__link" href="projects/retractor-arm/">Open design exhibit</a></p>
