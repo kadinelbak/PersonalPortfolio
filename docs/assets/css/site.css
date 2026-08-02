@@ -1079,6 +1079,31 @@ img {
   line-height: 1.45;
 }
 
+.content-card .gallery-grid figure {
+  background: rgba(9, 12, 15, 0.92);
+  border-color: rgba(247, 242, 233, 0.16);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.content-card .gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  max-height: none;
+}
+
+.content-card .gallery-grid figcaption {
+  margin: 0;
+  max-width: none;
+  padding: 12px 14px 14px;
+  background: rgba(9, 12, 15, 0.96);
+  color: rgba(247, 242, 233, 0.92);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: left;
+}
+
 @media (max-width: 860px) {
   .nav-toggle {
     display: inline-flex;
