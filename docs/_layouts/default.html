@@ -6,14 +6,14 @@
   <title>{{ page.title }} | Kadin El Bakkouri</title>
   <script>
     (function () {
-      const knownRoots = new Set(['projects', 'research', 'leadership', 'fabrication', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
+      const knownRoots = new Set(['projects', 'research', 'leadership', 'fabrication', 'journey', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
       const segments = window.location.pathname.split('/').filter(Boolean);
       const rootPrefix = segments.length && !knownRoots.has(segments[0]) ? `/${segments[0]}` : '';
       window.__portfolioRoot = rootPrefix;
 
       const stylesheet = document.createElement('link');
       stylesheet.rel = 'stylesheet';
-      stylesheet.href = `${rootPrefix}/assets/css/site.css`;
+      stylesheet.href = `${rootPrefix}/assets/css/site.css?v=world-16`;
       document.head.appendChild(stylesheet);
     })();
   </script>
@@ -28,37 +28,39 @@
         <span></span>
       </button>
       <nav class="nav-links" id="site-nav">
-        <a href="/" data-path="/">About</a>
+        <a href="/" data-path="/">Explore</a>
+        <a href="/#workbench" data-path="/#workbench">Workbench</a>
+        <a href="/#gallery" data-path="/#gallery">Gallery</a>
+        <a href="/journey/" data-path="/journey/">Journey</a>
+        <a href="/projects/" data-path="/projects/">Projects</a>
         <a href="/research/" data-path="/research/">Research</a>
-        <div class="nav-dropdown">
-          <a href="/projects/" data-path="/projects/" class="nav-dropdown__toggle">Projects</a>
-          <div class="nav-dropdown__menu">
-            <a href="/projects/#design" data-path="/projects/#design">Design</a>
-            <a href="/projects/#computational" data-path="/projects/#computational">Computational</a>
-            <a href="/projects/#events" data-path="/projects/#events">Events</a>
-          </div>
-        </div>
-        <a href="/fabrication/" data-path="/fabrication/">Fabrication</a>
-        <a href="/coursework/" data-path="/coursework/">Coursework</a>
         <a href="/contact/" data-path="/contact/">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="page">
-    <div class="page__eyebrow">Biomedical Engineering Portfolio</div>
     <article class="content-card">
       {{ content }}
     </article>
   </main>
+
   <script>
     (function () {
       const rootPrefix = window.__portfolioRoot || '';
+
       document.querySelectorAll('[data-path]').forEach((link) => {
         const targetPath = link.getAttribute('data-path');
         if (targetPath) {
           link.setAttribute('href', `${rootPrefix}${targetPath}`);
         }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach((link) => {
+        const target = new URL(link.href, window.location.href);
+        const samePath = target.pathname.replace(/\/$/, '') === window.location.pathname.replace(/\/$/, '');
+        const sameHash = target.hash ? target.hash === window.location.hash : !window.location.hash;
+        link.classList.toggle('active', samePath && sameHash);
       });
 
       const header = document.querySelector('.site-header');
@@ -105,7 +107,6 @@
       }
 
       const filterGroups = document.querySelectorAll('[data-bento-filters]');
-      if (!filterGroups.length) return;
       const cards = document.querySelectorAll('[data-bento-card]');
       filterGroups.forEach((group) => {
         const buttons = group.querySelectorAll('button[data-filter]');
@@ -126,8 +127,10 @@
         });
         applyFilter('all');
       });
+
     })();
   </script>
+  <script src="{{ '/assets/js/world.js' | relative_url }}"></script>
   <script>
     (function () {
       const reveals = document.querySelectorAll('.reveal');
