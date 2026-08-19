@@ -4,6 +4,13 @@ layout: default
 permalink: /scholar-profile/
 ---
 
+<nav class="scholar-tabs" aria-label="Scholar profile sections">
+  <a href="{{ '/scholar-profile/#about' | relative_url }}">About</a>
+  <a href="{{ '/scholar-profile/#research' | relative_url }}">Research</a>
+  <a href="{{ '/scholar-profile/#coursework' | relative_url }}">Coursework</a>
+  <a href="{{ '/scholar-profile/#cv-resume' | relative_url }}">CV/Resume</a>
+</nav>
+
 <section class="scholar-hero" id="about">
   <div class="scholar-hero__copy">
     <p class="scholar-kicker">CUR E-Portfolio</p>
@@ -13,13 +20,6 @@ permalink: /scholar-profile/
   </div>
   <img class="scholar-hero__portrait" src="{{ '/assets/img/headshot.jpeg' | relative_url }}" alt="Professional headshot of Kadin El Bakkouri" />
 </section>
-
-<nav class="scholar-tabs" aria-label="Scholar profile sections">
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#coursework">Coursework</a>
-  <a href="#cv-resume">CV/Resume</a>
-</nav>
 
 <section class="scholar-section" id="research">
   <div class="scholar-section__header">

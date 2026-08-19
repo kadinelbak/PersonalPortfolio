@@ -920,12 +920,32 @@ body {
   border-color: rgba(197, 92, 10, 0.42);
 }
 
+.scholar-page .site-header {
+  display: none;
+}
+
+.scholar-page {
+  overflow-x: hidden;
+}
+
+.scholar-page .page {
+  padding-top: 0;
+}
+
+.scholar-page .content-card {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
 .scholar-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) 220px;
-  gap: clamp(22px, 4vw, 42px);
+  grid-template-columns: minmax(0, 1.08fr) minmax(220px, 0.42fr);
+  gap: clamp(26px, 6vw, 88px);
   align-items: center;
-  margin-bottom: 28px;
+  min-height: auto;
+  padding: clamp(58px, 7vw, 92px) 0 clamp(42px, 6vw, 76px);
+  border-bottom: 1px solid rgba(247, 242, 233, 0.14);
+  animation: scholarRise 0.72s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
 .scholar-hero h1 {
@@ -947,9 +967,10 @@ body {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   margin: 0;
-  border-radius: 14px;
-  border: 1px solid rgba(247, 242, 233, 0.14);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.26);
+  border-radius: 0;
+  border: 1px solid rgba(247, 242, 233, 0.16);
+  box-shadow: 18px 18px 0 rgba(242, 166, 90, 0.16);
+  filter: saturate(0.96) contrast(1.02);
 }
 
 .scholar-kicker {
@@ -963,46 +984,54 @@ body {
 
 .scholar-tabs {
   position: sticky;
-  top: 72px;
-  z-index: 8;
+  top: 0;
+  z-index: 80;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 22px 0 42px;
-  padding: 10px;
-  border: 1px solid rgba(247, 242, 233, 0.12);
-  border-radius: 12px;
-  background: rgba(12, 15, 18, 0.82);
-  backdrop-filter: blur(14px);
+  gap: clamp(14px, 3vw, 34px);
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 68px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(247, 242, 233, 0.12);
+  background: rgba(8, 10, 13, 0.9);
+  backdrop-filter: blur(16px);
+  animation: scholarDrop 0.58s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
 .content-card .scholar-tabs a,
 .content-card .scholar-home-link {
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
-  padding: 8px 12px;
-  border: 1px solid rgba(242, 166, 90, 0.3);
-  border-radius: 8px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   color: #f2a65a;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .content-card .scholar-tabs a:hover,
 .content-card .scholar-home-link:hover {
-  border-color: rgba(255, 217, 168, 0.68);
+  border-color: rgba(255, 217, 168, 0.78);
   color: #ffd9a8;
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .scholar-section {
-  scroll-margin-top: 142px;
-  margin-top: 44px;
-  padding-top: 8px;
+  scroll-margin-top: 88px;
+  margin-top: 0;
+  padding: clamp(60px, 8vw, 108px) 0;
+  border-bottom: 1px solid rgba(247, 242, 233, 0.12);
+  animation: scholarRise 0.72s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
 .scholar-section__header {
@@ -1018,17 +1047,21 @@ body {
 .scholar-facts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin: 0 0 30px;
+  gap: 0;
+  margin: 10px 0 40px;
+  border-top: 1px solid rgba(247, 242, 233, 0.14);
+  border-left: 1px solid rgba(247, 242, 233, 0.14);
 }
 
 .scholar-facts div,
 .scholar-grid article {
   min-width: 0;
-  padding: 16px 18px;
-  border: 1px solid rgba(247, 242, 233, 0.12);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.055);
+  padding: clamp(18px, 3vw, 30px);
+  border: 0;
+  border-right: 1px solid rgba(247, 242, 233, 0.14);
+  border-bottom: 1px solid rgba(247, 242, 233, 0.14);
+  border-radius: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
 }
 
 .scholar-facts dt {
@@ -1047,9 +1080,9 @@ body {
 .scholar-feature {
   display: grid;
   grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.05fr);
-  gap: clamp(22px, 4vw, 38px);
+  gap: clamp(28px, 5vw, 64px);
   align-items: start;
-  margin: 30px 0 42px;
+  margin: 42px 0 64px;
 }
 
 .scholar-feature--reverse {
@@ -1070,10 +1103,11 @@ body {
   width: 100%;
   max-height: 360px;
   object-fit: contain;
-  padding: 12px;
-  border: 1px solid rgba(247, 242, 233, 0.12);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .content-card .scholar-feature figcaption {
@@ -1091,7 +1125,9 @@ body {
 .scholar-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 0;
+  border-top: 1px solid rgba(247, 242, 233, 0.14);
+  border-left: 1px solid rgba(247, 242, 233, 0.14);
 }
 
 .scholar-grid ul {
@@ -1101,8 +1137,23 @@ body {
 .scholar-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 18px;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.content-card .scholar-actions .document-download,
+.content-card .scholar-feature .document-download {
+  border-radius: 0;
+  border-color: rgba(242, 166, 90, 0.45);
+  background: transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.content-card .scholar-actions .document-download:hover,
+.content-card .scholar-feature .document-download:hover {
+  border-color: rgba(255, 217, 168, 0.82);
+  background: transparent;
+  transform: translateY(-1px);
 }
 
 .scholar-contact {
@@ -1111,9 +1162,32 @@ body {
   gap: 18px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(247, 242, 233, 0.12);
+  margin-top: 0;
+  padding: clamp(40px, 6vw, 72px) 0;
+  border-top: 0;
+  animation: scholarRise 0.72s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+@keyframes scholarRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scholarDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 760px) {
@@ -1127,6 +1201,7 @@ body {
 
   .scholar-hero__portrait {
     width: min(220px, 100%);
+    box-shadow: 10px 10px 0 rgba(242, 166, 90, 0.16);
   }
 
   .scholar-feature--reverse figure {
@@ -1134,7 +1209,10 @@ body {
   }
 
   .scholar-tabs {
-    position: static;
+    justify-content: flex-start;
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
