@@ -89,39 +89,27 @@ permalink: /scholar-profile/
     <p>My academic program combines biomedical engineering, quantitative analysis, and biological context.</p>
   </div>
 
-  <div class="scholar-grid">
-    <article>
+  <div class="scholar-coursework">
+    <div>
       <h3>Program</h3>
-      <p><strong>Major:</strong> Biomedical Engineering (Honors), University of Florida</p>
-      <p><strong>Minors:</strong> Chemistry, Bioinformatics</p>
-    </article>
-    <article>
-      <h3>Biomedical Foundations</h3>
-      <ul>
-        <li>Physiology</li>
-        <li>Biochemistry</li>
-        <li>Biomaterials</li>
-        <li>Cell Engineering Lab</li>
-      </ul>
-    </article>
-    <article>
-      <h3>Quantitative &amp; Technical</h3>
-      <ul>
-        <li>Differential Equations</li>
-        <li>Quantitative Physiology</li>
-        <li>Instrumentation</li>
-        <li>Bioinformatics</li>
-      </ul>
-    </article>
-    <article>
+      <div class="scholar-coursework__details">
+        <p><strong>Major:</strong> Biomedical Engineering (Honors), University of Florida</p>
+        <p><strong>Minors:</strong> Chemistry, Bioinformatics</p>
+      </div>
+    </div>
+    <div>
+      <h3>Selected Coursework</h3>
+      <div class="scholar-coursework__details">
+        <p><strong>Biomedical:</strong> Physiology, Biochemistry, Biomaterials, Cell Engineering Lab</p>
+        <p><strong>Quantitative &amp; Technical:</strong> Differential Equations, Quantitative Physiology, Instrumentation, Bioinformatics</p>
+      </div>
+    </div>
+    <div>
       <h3>Recognition &amp; Involvement</h3>
-      <ul>
-        <li>University of Florida Honors Biomedical Engineering</li>
-        <li>3rd Place, Research Poster Presentation</li>
-        <li>First Place, Dream Team Engineering Hackathon</li>
-        <li>Generational Relief in Prosthetics (GRiP)</li>
-      </ul>
-    </article>
+      <div class="scholar-coursework__details">
+        <p>University of Florida Honors Biomedical Engineering; 3rd Place, Research Poster Presentation; First Place, Dream Team Engineering Hackathon; Generational Relief in Prosthetics (GRiP).</p>
+      </div>
+    </div>
   </div>
 </section>
 

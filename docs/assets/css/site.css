@@ -1172,6 +1172,41 @@ body:has(.scholar-tabs) .content-card {
   animation: scholarRise 0.72s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
+.scholar-coursework {
+  border-top: 1px solid rgba(247, 242, 233, 0.14);
+}
+
+.scholar-coursework div {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.26fr) minmax(0, 0.74fr);
+  gap: clamp(16px, 3vw, 34px);
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(247, 242, 233, 0.14);
+}
+
+.scholar-coursework .scholar-coursework__details {
+  display: block;
+  padding: 0;
+  border: 0;
+}
+
+.scholar-coursework h3 {
+  margin: 0;
+  color: rgba(247, 242, 233, 0.94);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+.scholar-coursework p {
+  margin: 0 0 0.45rem;
+  color: rgba(226, 218, 204, 0.84);
+  font-size: clamp(0.98rem, 1.2vw, 1.06rem);
+  line-height: 1.55;
+}
+
+.scholar-coursework p:last-child {
+  margin-bottom: 0;
+}
+
 @keyframes scholarRise {
   from {
     opacity: 0;
@@ -1217,6 +1252,11 @@ body:has(.scholar-tabs) .content-card {
     min-height: auto;
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+
+  .scholar-coursework div {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
