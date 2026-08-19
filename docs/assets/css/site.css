@@ -920,19 +920,23 @@ body {
   border-color: rgba(197, 92, 10, 0.42);
 }
 
-.scholar-page .site-header {
+.scholar-page .site-header,
+body:has(.scholar-tabs) .site-header {
   display: none;
 }
 
-.scholar-page {
+.scholar-page,
+body:has(.scholar-tabs) {
   overflow-x: hidden;
 }
 
-.scholar-page .page {
+.scholar-page .page,
+body:has(.scholar-tabs) .page {
   padding-top: 0;
 }
 
-.scholar-page .content-card {
+.scholar-page .content-card,
+body:has(.scholar-tabs) .content-card {
   max-width: 1180px;
   margin: 0 auto;
 }
