@@ -260,5 +260,6 @@ layout: default
   <div>
     <a href="{{ '/assets/pdf/Kadin El Bakkouri CV.pdf' | relative_url }}" download>Download CV</a>
     <a href="{{ '/assets/pdf/Resume.pdf' | relative_url }}" download>Download Resume</a>
+    <a href="{{ '/scholar-profile/' | relative_url }}">Scholar Profile</a>
   </div>
 </section>
