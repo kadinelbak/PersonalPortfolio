@@ -80,6 +80,18 @@ This page groups the portfolio into the three buckets that best reflect how the 
 			</div>
 			<p><a class="bento-card__link" href="../fabrication/">Open fabrication gallery</a></p>
 		</article>
+
+		<article class="bento-card bento-card--footmonitor bento-card--wide">
+			<div class="bento-card__meta">Design | 12-Hour Designathon</div>
+			<h3 class="bento-card__title">Foot Ulcer Early-Warning Monitor</h3>
+			<p class="bento-card__copy">A thermistor sock that compares left and right foot temperature to flag early ulcer inflammation, built as an Arduino dashboard and as a chip-level analog alarm.</p>
+			<div class="bento-card__chips">
+				<span>Arduino</span>
+				<span>Analog circuits</span>
+				<span>Web Serial</span>
+			</div>
+			<p><a class="bento-card__link" href="../projects/foot-ulcer-monitor/">Open sensing exhibit</a></p>
+		</article>
 	</div>
 </section>
 

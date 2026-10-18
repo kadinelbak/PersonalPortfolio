@@ -101,6 +101,11 @@ layout: default
       <strong>Retractor Arm</strong>
       <em>mechanics</em>
     </a>
+    <a class="world-node" style="--x:47; --y:41; --s:0.7;" href="{{ '/projects/foot-ulcer-monitor/' | relative_url }}" data-category="health">
+      <span></span>
+      <strong>Foot Monitor</strong>
+      <em>ulcer early warning</em>
+    </a>
     <a class="world-node" style="--x:42; --y:53; --s:0.72;" href="{{ '/projects/vitalintel/' | relative_url }}" data-category="health">
       <span></span>
       <strong>VitalIntel</strong>
