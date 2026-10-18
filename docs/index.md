@@ -101,6 +101,11 @@ layout: default
       <strong>Retractor Arm</strong>
       <em>mechanics</em>
     </a>
+    <a class="world-node" style="--x:46; --y:40; --s:0.72;" href="{{ '/designathons/' | relative_url }}" data-category="health">
+      <span></span>
+      <strong>Designathons</strong>
+      <em>timed prototypes</em>
+    </a>
     <a class="world-node" style="--x:42; --y:53; --s:0.72;" href="{{ '/projects/vitalintel/' | relative_url }}" data-category="health">
       <span></span>
       <strong>VitalIntel</strong>

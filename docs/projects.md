@@ -80,6 +80,17 @@ This page groups the portfolio into the three buckets that best reflect how the 
 			</div>
 			<p><a class="bento-card__link" href="../fabrication/">Open fabrication gallery</a></p>
 		</article>
+
+		<article class="bento-card bento-card--designathons bento-card--full">
+			<div class="bento-card__meta">Design | Designathon Projects</div>
+			<h3 class="bento-card__title">Designathons</h3>
+			<p class="bento-card__copy">Prototypes built against the clock at health-tech design competitions: Brace for Impact, an adaptive ankle brace with MR-fluid dampers, and ThermoThreads, a temperature-sensing sock for early foot-ulcer warning.</p>
+			<div class="bento-card__chips">
+				<span>Brace for Impact</span>
+				<span>ThermoThreads</span>
+			</div>
+			<p><a class="bento-card__link" href="../designathons/">Open designathon exhibits</a></p>
+		</article>
 	</div>
 </section>
 

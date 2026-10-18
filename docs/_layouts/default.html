@@ -6,14 +6,14 @@
   <title>{{ page.title }} | Kadin El Bakkouri</title>
   <script>
     (function () {
-      const knownRoots = new Set(['projects', 'research', 'scholar-profile', 'leadership', 'fabrication', 'journey', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
+      const knownRoots = new Set(['projects', 'designathons', 'research', 'scholar-profile', 'leadership', 'fabrication', 'journey', 'coursework', 'engineering', 'contact', 'cv', 'assets']);
       const segments = window.location.pathname.split('/').filter(Boolean);
       const rootPrefix = segments.length && !knownRoots.has(segments[0]) ? `/${segments[0]}` : '';
       window.__portfolioRoot = rootPrefix;
 
       const stylesheet = document.createElement('link');
       stylesheet.rel = 'stylesheet';
-      stylesheet.href = `${rootPrefix}/assets/css/site.css?v=world-19`;
+      stylesheet.href = `${rootPrefix}/assets/css/site.css?v=world-20`;
       document.head.appendChild(stylesheet);
     })();
   </script>

@@ -533,6 +533,61 @@ body {
     url("../../assets/img/foot/foot1.png") center/cover no-repeat;
 }
 
+.bento-card--full {
+  grid-column: 1 / -1;
+}
+
+.bento-card--designathons {
+  min-height: 260px;
+  background:
+    radial-gradient(circle at 16% 82%, rgba(197, 92, 10, 0.3), transparent 46%),
+    radial-gradient(circle at 88% 20%, rgba(32, 93, 138, 0.26), transparent 42%),
+    linear-gradient(135deg, rgba(20, 24, 31, 0.98), rgba(10, 12, 16, 0.98));
+}
+
+.bento-card--designathons::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 48%;
+  background: url("../../assets/img/brace-for-impact/01-brace-cad-render.jpg") center/cover no-repeat;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%);
+  mask-image: linear-gradient(90deg, transparent, #000 45%);
+}
+
+.bento-card--designathons .bento-card__copy {
+  max-width: 640px;
+}
+
+.bento-card--brace {
+  background:
+    linear-gradient(180deg, rgba(7, 9, 12, 0.08), rgba(7, 9, 12, 0.9)),
+    radial-gradient(circle at 18% 82%, rgba(197, 92, 10, 0.3), transparent 46%),
+    url("../../assets/img/brace-for-impact/01-brace-cad-render.jpg") center/cover no-repeat;
+}
+
+.bento-card--thermothreads {
+  background:
+    linear-gradient(180deg, rgba(7, 9, 12, 0.4) 0%, rgba(7, 9, 12, 0.86) 42%, rgba(7, 9, 12, 0.96) 100%),
+    radial-gradient(circle at 22% 24%, rgba(197, 92, 10, 0.36), transparent 44%),
+    radial-gradient(circle at 80% 70%, rgba(32, 93, 138, 0.38), transparent 46%),
+    url("../../assets/img/thermothreads/system-diagram.webp") center top/cover no-repeat,
+    linear-gradient(135deg, rgba(40, 24, 18, 0.96), rgba(13, 15, 18, 0.98));
+}
+
+.content-card figure.figure--narrow {
+  max-width: 760px;
+}
+
+.content-card .project-video video {
+  display: block;
+  width: min(360px, 100%);
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #000;
+}
+
 .bento-card--hosting {
   background:
     linear-gradient(180deg, rgba(7, 9, 12, 0.18), rgba(7, 9, 12, 0.9)),
