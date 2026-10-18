@@ -533,6 +533,13 @@ body {
     url("../../assets/img/foot/foot1.png") center/cover no-repeat;
 }
 
+.bento-card--footmonitor {
+  background:
+    linear-gradient(180deg, rgba(7, 9, 12, 0.18), rgba(7, 9, 12, 0.9)),
+    radial-gradient(circle at 84% 18%, rgba(197, 92, 10, 0.26), transparent 44%),
+    url("../../assets/img/foot-monitor/card-rise-chart.webp") center/cover no-repeat;
+}
+
 .bento-card--hosting {
   background:
     linear-gradient(180deg, rgba(7, 9, 12, 0.18), rgba(7, 9, 12, 0.9)),
