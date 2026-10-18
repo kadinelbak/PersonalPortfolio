@@ -5,7 +5,7 @@ layout: project
 
 ## ThermoThreads (Designathon Project)
 
-ThermoThreads is a low-cost sock-based screening aid that compares left and right foot temperature to flag a developing diabetic foot ulcer before the skin breaks down. Built in 12 hours at the UF BMES x IEEE EMBS design event (October 2026), in two versions: an Arduino build with a live web dashboard, and a chip-level analog alarm with no microcontroller logic.
+ThermoThreads is a low-cost sock with integrated temperature sensors that compares left and right foot temperature to flag a developing diabetic foot ulcer before the skin breaks down. The sock separates a true left/right difference from warming caused by activity, and sends its readings to a dashboard that explains what is happening. Our team built it in 12 hours at the UF BMES x IEEE EMBS design event (October 2026), in two versions: an Arduino build with a live web dashboard, and a chip-level analog alarm with no microcontroller logic.
 
 <img src="../../assets/img/thermothreads/system-diagram.webp" alt="System diagram: thermistors and a tilt switch in the sock feed either Arduino firmware and a web dashboard, or an analog bridge, LM393 window comparator, NE555 activity timer and 74LS32 alert gate" />
 
@@ -56,9 +56,11 @@ The estimated parts cost was about $13.63 for the analog sock against about $42.
 
 <img src="../../assets/img/thermothreads/live-one-sock-session.webp" alt="Live one-sock session from the real sock: ball and heel rise above calibration with warming spikes during movement" />
 
-## Technical Contribution
+## Team and My Contribution
 
-I chose the problem from a brainstorm of kit-compatible device ideas, built and wired the sensor sock and Arduino prototype, brought up and balanced the analog bridge on a breadboard, and debugged the hardware through the demo. I set the clinical thresholds and movement logic, and directed the firmware, the dashboard and the analog design through several iterations as the build changed.
+ThermoThreads was a team build: together we designed socks with integrated sensors that detect temperature differences between the feet, account for activity and other everyday rises in temperature, and send that information to a dashboard that explains what is occurring.
+
+Within the team, I chose the problem from a brainstorm of kit-compatible device ideas, built and wired the sensor sock and Arduino prototype, brought up and balanced the analog bridge on a breadboard, and debugged the hardware through the demo. I set the clinical thresholds and movement logic, and directed the firmware, the dashboard and the analog design through several iterations as the build changed.
 
 ## Status
 
