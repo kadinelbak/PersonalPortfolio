@@ -45,6 +45,7 @@ class MarkdownHTTPHandler(SimpleHTTPRequestHandler):
             "/leadership": DEFAULT_TEMPLATE_ROOT / "leadership.md",
             "/fabrication": DEFAULT_TEMPLATE_ROOT / "fabrication.md",
             "/projects": DEFAULT_TEMPLATE_ROOT / "projects.md",
+            "/designathons": DEFAULT_TEMPLATE_ROOT / "designathons.md",
             "/research": DEFAULT_TEMPLATE_ROOT / "research.md",
             "/coursework": DEFAULT_TEMPLATE_ROOT / "coursework.md",
             "/engineering": DEFAULT_TEMPLATE_ROOT / "engineering.md",
