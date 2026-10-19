@@ -7,6 +7,11 @@ layout: project
 
 ThermoThreads is a low-cost sock with integrated temperature sensors that compares left and right foot temperature to flag a developing diabetic foot ulcer before the skin breaks down. The sock separates a true left/right difference from warming caused by activity, and sends its readings to a dashboard that explains what is happening. Our team built it in 12 hours at the UF BMES x IEEE EMBS design event (October 2026), in two versions: an Arduino build with a live web dashboard, and a chip-level analog alarm with no microcontroller logic.
 
+<figure class="figure--narrow">
+  <img src="../../assets/img/thermothreads/sock-prototype.webp" alt="The ThermoThreads prototype sock with thermistor leads sewn in and wired to an Arduino Uno" />
+  <figcaption>The prototype sock: thermistor and tilt-switch leads run from the sock to the Arduino.</figcaption>
+</figure>
+
 <img src="../../assets/img/thermothreads/system-diagram.webp" alt="System diagram: thermistors and a tilt switch in the sock feed either Arduino firmware and a web dashboard, or an analog bridge, LM393 window comparator, NE555 activity timer and 74LS32 alert gate" />
 
 ## Clinical Need
@@ -26,6 +31,11 @@ Each sock carries thermistors at the ball and heel plus a tilt switch. The compa
 
 **Digital build.** An Arduino Uno converts each divider reading to °C with the beta equation and drives three LEDs: two for tilt and one for the temperature difference (off below 1.75 °C, blinking at watch, solid above 2.2 °C, with 0.2 °C hysteresis). It streams one line a second over serial.
 
+<figure class="figure--narrow">
+  <img src="../../assets/img/thermothreads/arduino-breadboard.webp" alt="Arduino Uno wired to a breadboard with the sensor dividers and three indicator LEDs" />
+  <figcaption>The digital build on the bench: Arduino Uno, sensor dividers and the three indicator LEDs.</figcaption>
+</figure>
+
 **Web dashboard.** A single offline HTML page reads the board over Web Serial and shows temperature over time for ball and heel, the average left/right difference with watch and alert lines, a shaded foot heat map with a replay slider, and the activation periods from the tilt switches. Demo data and CSV import/export let it run without hardware.
 
 <img src="../../assets/img/thermothreads/dashboard-two-feet.webp" alt="Dashboard in two-feet mode showing ball and heel temperature over time, alarm state, and average left minus right difference" />
@@ -44,6 +54,11 @@ The same decision was rebuilt without software, using only kit parts and the Ard
 - **74LS32 alert gate:** the red LED lights only when the feet differ and nothing moved.
 
 The estimated parts cost was about $13.63 for the analog sock against about $42.79 for the digital sock, most of the difference being the Arduino board.
+
+<figure class="figure--narrow">
+  <img src="../../assets/img/thermothreads/analog-breadboard.webp" alt="Analog breadboard build with the thermistor bridge, LM393, NE555 and 74LS32 chips, indicator LEDs and a breadboard power module" />
+  <figcaption>The analog alarm on a breadboard: thermistor bridge, LM393, NE555 and 74LS32, with no microcontroller logic.</figcaption>
+</figure>
 
 <img src="../../assets/img/thermothreads/analog-schematic.webp" alt="Analog schematic in five blocks: sensor bridge, LM393 window comparator, NE555 activity timer, 74LS32 alert logic, and power" />
 
